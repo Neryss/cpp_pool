@@ -33,4 +33,5 @@ void	ponyOnTheStack(bool diamond, bool fly, std::string name)
 	pony->can_fly = fly;
 	pony->name = name;
 	doThings(*pony);
+	delete pony;
 }
