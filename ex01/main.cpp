@@ -5,13 +5,28 @@ int	add_contact(contact *book, int i)
 	std::string	input;
 	if (i >= 8)
 		return (1);
-	book->id = i + 1;
+	book[i].id = i;
 	std::cout << "Enter first name" << std::endl;
 	std::getline(std::cin, book[i].f_name);
+	if ((int)book[i].f_name.length() > 10)
+	{
+		book[i].f_name = book[i].f_name.substr(0, 10);
+		book[i].f_name[9] = '.';
+	}
 	std::cout << "Enter last name" << std::endl;
 	std::getline(std::cin, book[i].l_name);
+	if ((int)book[i].l_name.length() > 10)
+	{
+		book[i].l_name = book[i].l_name.substr(0, 10);
+		book[i].l_name[9] = '.';
+	}
 	std::cout << "Enter nickname" << std::endl;
 	std::getline(std::cin, book[i].n_name);
+	if ((int)book[i].n_name.length() > 10)
+	{
+		book[i].n_name = book[i].n_name.substr(0, 10);
+		book[i].n_name[9] = '.';
+	}
 	std::cout << "Enter login" << std::endl;
 	std::getline(std::cin, book[i].login);
 	std::cout << "Enter postal code" << std::endl;
@@ -28,7 +43,7 @@ int	add_contact(contact *book, int i)
 	std::getline(std::cin, book[i].underwear);
 	std::cout << "Enter your darkest secret" << std::endl;
 	std::getline(std::cin, book[i].secret);
-	std::cout << "Contact registered as nb: " << book->id << std::endl;
+	std::cout << "Contact registered as nb: " << book[i].id << std::endl;
 	return (0);
 }
 
@@ -39,11 +54,14 @@ void	display_book(contact *book, int i)
 		std::cout.width(10);
 		std::cout << std::right << book[j].id;
 		std::cout << '|';
+		std::cout.width(10);
 		std::cout << std::right << book[j].f_name;
 		std::cout << '|';
+		std::cout.width(10);
 		std::cout << std::right << book[j].l_name;
 		std::cout << '|';
-		std::cout << std::right << book[j].login << std::endl;
+		std::cout.width(10);
+		std::cout << std::right << book[j].n_name << std::endl;
 	}
 }
 
@@ -66,7 +84,7 @@ int	main(void)
 			if (!add_contact(book, i))
 				i++;
 			else
-				std::cout << "Max number of contact reached\n" << std::endl;
+				std::cout << "Max number of contact reached" << std::endl;
 		}
 		else if (input == "SEARCH")
 			display_book(book, i);
