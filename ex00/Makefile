@@ -1,1 +1,2 @@
-clang++ -Wall -Wextra -Werror megaphone.cpp
+all:
+	clang++ -Wall -Wextra -Werror megaphone.cpp
