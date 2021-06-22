@@ -7,29 +7,43 @@ int	add_contact(contact *book, int i)
 		return (1);
 	book->id = i + 1;
 	std::cout << "Enter first name" << std::endl;
-	std::getline(std::cin, book->f_name);
+	std::getline(std::cin, book[i].f_name);
 	std::cout << "Enter last name" << std::endl;
-	std::getline(std::cin, book->l_name);
+	std::getline(std::cin, book[i].l_name);
 	std::cout << "Enter nickname" << std::endl;
-	std::getline(std::cin, book->n_name);
+	std::getline(std::cin, book[i].n_name);
 	std::cout << "Enter login" << std::endl;
-	std::getline(std::cin, book->login);
+	std::getline(std::cin, book[i].login);
 	std::cout << "Enter postal code" << std::endl;
-	std::getline(std::cin, book->postal);
+	std::getline(std::cin, book[i].postal);
 	std::cout << "Enter email" << std::endl;
-	std::getline(std::cin, book->mail);
+	std::getline(std::cin, book[i].mail);
 	std::cout << "Enter phone number" << std::endl;
-	std::getline(std::cin, book->phone);
+	std::getline(std::cin, book[i].phone);
 	std::cout << "Enter birth date" << std::endl;
-	std::getline(std::cin, book->bday);
+	std::getline(std::cin, book[i].bday);
 	std::cout << "Enter favorite meal" << std::endl;
-	std::getline(std::cin, book->meal);
+	std::getline(std::cin, book[i].meal);
 	std::cout << "Enter your underwear color" << std::endl;
-	std::getline(std::cin, book->underwear);
+	std::getline(std::cin, book[i].underwear);
 	std::cout << "Enter your darkest secret" << std::endl;
-	std::getline(std::cin, book->secret);
+	std::getline(std::cin, book[i].secret);
 	std::cout << "Contact registered as nb: " << book->id << std::endl;
 	return (0);
+}
+
+void	display_book(contact *book, int i)
+{
+	for (int j = 0; j < i; j++)
+	{
+		std::cout << std::right << std::setw(10) << book[j].id;
+		std::cout << '|';
+		std::cout << std::right << std::setw(10) << book[j].f_name;
+		std::cout << '|';
+		std::cout << std::right << std::setw(10) << book[j].l_name;
+		std::cout << '|';
+		std::cout << std::right << std::setw(10) << book[j].login << std::endl;
+	}
 }
 
 int	main(void)
@@ -53,6 +67,8 @@ int	main(void)
 			else
 				std::cout << "Max number of contact reached\n" << std::endl;
 		}
+		else if (input == "SEARCH")
+			display_book(book, i);
 	}
 	return (0);
 }
