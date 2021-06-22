@@ -2,5 +2,7 @@
 
 int	main(void)
 {
-	
+	ponyOnTheHeap(true, true, "Buttstalion");
+	ponyOnTheStack(false, false, "Bobert");
+	ponyOnTheStack(false, false, "");
 }
