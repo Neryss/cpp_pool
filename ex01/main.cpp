@@ -36,13 +36,14 @@ void	display_book(contact *book, int i)
 {
 	for (int j = 0; j < i; j++)
 	{
-		std::cout << std::right << std::setw(10) << book[j].id;
+		std::cout.width(10);
+		std::cout << std::right << book[j].id;
 		std::cout << '|';
-		std::cout << std::right << std::setw(10) << book[j].f_name;
+		std::cout << std::right << book[j].f_name;
 		std::cout << '|';
-		std::cout << std::right << std::setw(10) << book[j].l_name;
+		std::cout << std::right << book[j].l_name;
 		std::cout << '|';
-		std::cout << std::right << std::setw(10) << book[j].login << std::endl;
+		std::cout << std::right << book[j].login << std::endl;
 	}
 }
 
