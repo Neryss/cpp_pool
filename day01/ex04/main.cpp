@@ -11,17 +11,30 @@ int	ft_error(std::string error, int ret)
 void	replace_inline(std::ifstream &file, std::ofstream &replace, std::string &before, std::string &after)
 {
 	std::string	line;
+	std::string	start;
+	std::string	end;
 	size_t		found;
-	(void)after;
 
+	found = 0;
 	while (getline(file, line))
 	{
-		found = line.find(before);
-		if (found != line.npos)
+		if (line.find(before, 0) != line.npos)
 		{
-			std::cout << "Found one!" << std::endl;
+			while ((found = line.find(before, 0)) != line.npos)
+			{
+				start = line.substr(0, found);
+				end = line.substr(found + before.length(), line.length());
+				start.append(after);
+				start.append(end);
+				std::cout << start << std::endl;
+				line = start;
+				std::cout << "Found one at:" << found << std::endl;
+				found += found + before.length();
+			}
+			replace << start << std::endl;
 		}
-		replace << line << std::endl;
+		else
+			replace << line << std::endl;
 	}
 }
 
