@@ -1,12 +1,11 @@
-#include "Pony.hpp"
+#include "Zombie.hpp"
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	ponyOnTheHeap(true, true, "Buttstalion");
-	ponyOnTheHeap(false, false, "");
-	ponyOnTheHeap(false, true, "John");
-	ponyOnTheStack(true, true, "Buttstalion");
-	ponyOnTheStack(false, false, "");
-	ponyOnTheStack(false, true, "John");
-	return (0);
+	Zombie	test;
+	(void)argc;
+	(void)argv;
+
+	test.name = "Dave";
+	test.announce();
 }
