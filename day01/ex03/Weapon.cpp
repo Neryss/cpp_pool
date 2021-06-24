@@ -9,3 +9,12 @@ void	Weapon::setType(std::string new_name)
 {
 	name = new_name;
 }
+
+Weapon::Weapon()
+{
+	name = "Kinda sus stick";
+}
+
+Weapon::~Weapon()
+{
+}
