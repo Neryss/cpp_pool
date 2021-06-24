@@ -6,7 +6,7 @@ int main(void)
 {
 	{
 		Weapon club = Weapon("crude spiked club");
-		
+
 		HumanA bob("bob", club);
 		bob.attack();
 		club.setType("magnificient unbreakable diamon staff");
