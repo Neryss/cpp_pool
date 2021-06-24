@@ -22,5 +22,5 @@ void	error(void)
 
 void	Karen::complain(std::string level)
 {
-	
+	// Might need an enum
 }
