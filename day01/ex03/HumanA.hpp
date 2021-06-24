@@ -1,5 +1,5 @@
-#ifndef HUMAN_A_HPP
-#define HUMAN_A_HPP
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
 #include "Weapon.hpp"
 
@@ -9,7 +9,7 @@ class	HumanA
 		std::string	name;
 		Weapon		*weapon;
 	public:
-		HumanA(std::string p_name, Weapon p_weapon)
+		HumanA(std::string p_name, Weapon &p_weapon)
 		{
 			name = p_name;
 			weapon = &p_weapon;
