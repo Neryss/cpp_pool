@@ -26,9 +26,7 @@ void	replace_inline(std::ifstream &file, std::ofstream &replace, std::string &be
 				end = line.substr(found + before.length(), line.length());
 				start.append(after);
 				start.append(end);
-				std::cout << start << std::endl;
 				line = start;
-				std::cout << "Found one at:" << found << std::endl;
 				found += found + before.length();
 			}
 			replace << start << std::endl;
