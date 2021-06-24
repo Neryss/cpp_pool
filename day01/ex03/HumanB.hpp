@@ -13,7 +13,7 @@ class	HumanB
 		:name(p_name)
 		{}
 		~HumanB();
-		void	setWeapon(Weapon &weapon);
+		void	setWeapon(Weapon &n_weapon);
 		void	attack();
 };
 
