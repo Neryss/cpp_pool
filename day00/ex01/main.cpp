@@ -1,4 +1,5 @@
 #include "Contact.hpp"
+#include <limits>
 
 int	max_cont = 0;
 
