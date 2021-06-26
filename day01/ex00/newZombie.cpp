@@ -4,6 +4,6 @@ Zombie	*newZombie(std::string name)
 {
 	Zombie	*smol = new Zombie;
 
-	smol->name = name;
+	smol->setName(name);
 	return (smol);
 }

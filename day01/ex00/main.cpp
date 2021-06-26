@@ -5,7 +5,7 @@ int	main(void)
 	Zombie	*dave = newZombie("Dave");
 	Zombie	david;
 
-	david.name = "David";
+	david.setName("David");
 	dave->announce();
 	david.announce();
 	randomChump("Zoe");
