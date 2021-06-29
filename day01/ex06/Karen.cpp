@@ -19,3 +19,28 @@ void	Karen::error(void)
 {
 	std::cout << "This is unacceptable, I want to speak to the manager now." << std::endl;
 }
+
+void	Karen::filter(std::string level)
+{
+	bool	print = false;
+	void (Karen::*fns[])(void) = {
+		&Karen::debug,
+		&Karen::info,
+		&Karen::warning,
+		&Karen::error
+	};
+	std::string	type[4] = {
+		"DEBUG",
+		"INFO",
+		"WARNING",
+		"ERROR"
+	};
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == type[i] || print)
+		{
+			print = true;
+			(this->*fns[i])();
+		}
+	}
+}

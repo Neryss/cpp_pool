@@ -11,6 +11,8 @@ class Karen
 		void	info(void);
 		void	warning(void);
 		void	error(void);
+	public:
+		void	filter(std::string level);
 };
 
 #endif
