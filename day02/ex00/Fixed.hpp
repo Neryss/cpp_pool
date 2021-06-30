@@ -13,8 +13,8 @@ class	Fixed
 		Fixed();
 		Fixed(const Fixed &f1);
 		~Fixed();
-		int	getRawBits();
-
+		int	getRawBits() const;
+		void	setRawBits(int const raw);
 };
 
 #endif

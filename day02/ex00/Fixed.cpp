@@ -8,11 +8,23 @@ Fixed::Fixed()
 
 Fixed::Fixed(const Fixed &f1)
 {
+	std::cout << "Assignation operator called" << std::endl;
 	p_value = f1.getRawBits();
 }
 
-int	Fixed::getRawBits()
+int	Fixed::getRawBits() const
 {
 	std::cout << "getRawBits function called" << std::endl;
 	return (this->p_value);
+}
+
+void	Fixed::setRawBits(int const raw)
+{
+	std::cout << "setRawBits function called" << std::endl;
+	p_value = raw;
+}
+
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
 }
