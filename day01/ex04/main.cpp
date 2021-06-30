@@ -46,13 +46,14 @@ int	main(int argc, char **argv)
 	if (argc != 4)
 		return (ft_error("Wrong number of arguments", 1));
 	file.open(argv[1]);
-	name = argv[1];
-	name.append(".replace");
-	std:: ofstream replace (name);
-	before = argv[2];
-	after = argv[3];
 	if (!file.is_open())
 		return (ft_error("Error during file opening", 1));
+	name = argv[1];
+	name.append(".replace");
+	std::ofstream replace (name);
+	before = argv[2];
+	after = argv[3];
 	replace_inline(file, replace, before, after);
 	file.close();
+	return (0);
 }
