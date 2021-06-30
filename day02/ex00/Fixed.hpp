@@ -10,13 +10,10 @@ class	Fixed
 		int					p_value;
 		const static int	p_bits = 8;
 	public:
-		Fixed()
-		:p_value(0)
-		{};
-		Fixed(const Fixed &f1)
-		:p_value(f1.p_value)
-		{};
+		Fixed();
+		Fixed(const Fixed &f1);
 		~Fixed();
+		int	getRawBits();
 
 };
 
