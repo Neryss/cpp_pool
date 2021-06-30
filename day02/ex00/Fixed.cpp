@@ -28,3 +28,9 @@ Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
 }
+
+Fixed	&Fixed::operator=(Fixed &other)
+{
+	p_value = other.getRawBits();
+	return (*this);
+}
