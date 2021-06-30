@@ -1,0 +1,49 @@
+#include "Fixed.hpp"
+
+Fixed::Fixed()
+{
+	std::cout << "Default constructor called" << std::endl;
+	p_value = 0;
+}
+
+Fixed::Fixed(const Fixed &f1)
+{
+	std::cout << "Copy operator called" << std::endl;
+	p_value = f1.getRawBits();
+}
+
+Fixed::Fixed(const int raw)
+{
+	std::cout << "int constructor called" << std::endl;
+	p_value = raw << p_bits;
+}
+
+Fixed::Fixed(const float f_raw)
+{
+	std::cout << "float operator called" << std::endl;
+	p_value = roundf(f_raw * (1 << p_bits));
+}
+
+int	Fixed::getRawBits() const
+{
+	std::cout << "getRawBits function called" << std::endl;
+	return (this->p_value);
+}
+
+void	Fixed::setRawBits(int const raw)
+{
+	std::cout << "setRawBits function called" << std::endl;
+	p_value = raw;
+}
+
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
+Fixed	&Fixed::operator=(Fixed &other)
+{
+	std::cout << "Assignation operator called" << std::endl;
+	p_value = other.getRawBits();
+	return (*this);
+}
