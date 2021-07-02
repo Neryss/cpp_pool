@@ -118,6 +118,12 @@ Fixed	Fixed::operator/(const Fixed &other)
 	return (Fixed(this->toFloat() / other.toFloat()));
 }
 
+Fixed	&Fixed::operator++()
+{
+	this->p_value++;
+	return (*this);
+}
+
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1)
 {
 	os << f1.toFloat();
