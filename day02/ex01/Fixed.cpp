@@ -9,7 +9,7 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &f1)
 {
 	std::cout << "Copy operator called" << std::endl;
-	p_value = f1.getRawBits();
+	*this = f1;
 }
 
 Fixed::Fixed(const int raw)
@@ -33,7 +33,7 @@ int	Fixed::getRawBits() const
 float	Fixed::toFloat(void) const
 {
 	std::cout << "Float conversion function called" << std::endl;
-	return (roundf(p_value / (float)(1 << p_bits)));
+	return ((p_value / (float)(1 << p_bits)));
 }
 
 int		Fixed::toInt(void) const
@@ -53,9 +53,15 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed	&Fixed::operator=(Fixed &other)
+Fixed	&Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Assignation operator called" << std::endl;
 	p_value = other.getRawBits();
 	return (*this);
+}
+
+std::ostream	&operator<<(std::ostream &os, const Fixed &f1)
+{
+	os << f1.toFloat();
+	return (os);
 }
