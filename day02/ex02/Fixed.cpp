@@ -24,6 +24,11 @@ Fixed::Fixed(const float f_raw)
 	p_value = roundf(f_raw * (1 << p_bits));
 }
 
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
 int	Fixed::getRawBits() const
 {
 	return (this->p_value);
@@ -44,16 +49,53 @@ void	Fixed::setRawBits(int const raw)
 	p_value = raw;
 }
 
-Fixed::~Fixed()
-{
-	std::cout << "Destructor called" << std::endl;
-}
-
 Fixed	&Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Assignation operator called" << std::endl;
 	p_value = other.getRawBits();
 	return (*this);
+}
+
+bool	Fixed::operator<(const Fixed &other)
+{
+	if (p_value < other.p_value)
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator<=(const Fixed &other)
+{
+	if (p_value <= other.p_value)
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator>(const Fixed &other)
+{
+	if (p_value > other.p_value)
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator>=(const Fixed &other)
+{
+	if (p_value >= other.p_value)
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator==(const Fixed &other)
+{
+	if (p_value == other.p_value)
+		return (true);
+	return (false);
+}
+
+bool	Fixed::operator!=(const Fixed &other)
+{
+	if (p_value != other.p_value)
+		return (true);
+	return (false);
 }
 
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1)
