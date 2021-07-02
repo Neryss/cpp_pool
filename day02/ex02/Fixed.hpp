@@ -26,6 +26,7 @@ class	Fixed
 		Fixed	operator*(const Fixed &other);
 		Fixed	operator/(const Fixed &other);
 		Fixed	&operator++();
+		Fixed	operator++(int dummy);
 		bool	operator<(const Fixed &other);
 		bool	operator<=(const Fixed &other);
 		bool	operator>(const Fixed &other);

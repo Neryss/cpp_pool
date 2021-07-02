@@ -124,6 +124,14 @@ Fixed	&Fixed::operator++()
 	return (*this);
 }
 
+Fixed	Fixed::operator++(int dummy)
+{
+	(void)dummy;
+	Fixed	tmp(*this);
+	this->p_value++;
+	return (tmp);
+}
+
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1)
 {
 	os << f1.toFloat();
