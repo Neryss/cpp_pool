@@ -100,12 +100,22 @@ bool	Fixed::operator!=(const Fixed &other)
 
 Fixed	Fixed::operator+(const Fixed &other)
 {
-	return (Fixed(p_value + other.toFloat()));
+	return (Fixed(this->toFloat() + other.toFloat()));
 }
 
 Fixed	Fixed::operator-(const Fixed &other)
 {
 	return (Fixed(this->toFloat() - other.toFloat()));
+}
+
+Fixed	Fixed::operator*(const Fixed &other)
+{
+	return (Fixed(this->toFloat() * other.toFloat()));
+}
+
+Fixed	Fixed::operator/(const Fixed &other)
+{
+	return (Fixed(this->toFloat() / other.toFloat()));
 }
 
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1)
