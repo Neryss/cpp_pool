@@ -12,5 +12,5 @@ int	main(void)
 	std::cout << a << std::endl;
 
 	std::cout << b << std::endl;
-
+	std::cout << "min is " << Fixed::min(a, b) << std::endl;
 }
