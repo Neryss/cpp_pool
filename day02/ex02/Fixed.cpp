@@ -98,6 +98,16 @@ bool	Fixed::operator!=(const Fixed &other)
 	return (false);
 }
 
+Fixed	Fixed::operator+(const Fixed &other)
+{
+	return (Fixed(p_value + other.getRawBits()));
+}
+
+Fixed	Fixed::operator-(const Fixed &other)
+{
+	return (Fixed(p_value - other.getRawBits()));
+}
+
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1)
 {
 	os << f1.toFloat();
