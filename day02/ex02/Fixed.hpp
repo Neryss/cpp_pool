@@ -36,5 +36,6 @@ class	Fixed
 };
 
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1);
+Fixed			&min(Fixed &a, Fixed &b);
 
 #endif

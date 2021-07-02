@@ -132,6 +132,13 @@ Fixed	Fixed::operator++(int dummy)
 	return (tmp);
 }
 
+Fixed	&min(Fixed &a, Fixed &b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1)
 {
 	os << f1.toFloat();
