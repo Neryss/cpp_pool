@@ -26,25 +26,21 @@ Fixed::Fixed(const float f_raw)
 
 int	Fixed::getRawBits() const
 {
-	// std::cout << "getRawBits function called" << std::endl;
 	return (this->p_value);
 }
 
 float	Fixed::toFloat(void) const
 {
-	// std::cout << "Float conversion function called" << std::endl;
 	return ((p_value / (float)(1 << p_bits)));
 }
 
 int		Fixed::toInt(void) const
 {
-	// std::cout << "Int conversion function called" << std::endl;
 	return (p_value >> p_bits);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	// std::cout << "setRawBits function called" << std::endl;
 	p_value = raw;
 }
 
