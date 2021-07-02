@@ -8,7 +8,7 @@ Fixed::Fixed()
 
 Fixed::Fixed(const Fixed &f1)
 {
-	std::cout << "Copy operator called" << std::endl;
+	std::cout << "Copy constructor called" << std::endl;
 	*this = f1;
 }
 
@@ -20,31 +20,31 @@ Fixed::Fixed(const int raw)
 
 Fixed::Fixed(const float f_raw)
 {
-	std::cout << "float operator called" << std::endl;
+	std::cout << "float constructor called" << std::endl;
 	p_value = roundf(f_raw * (1 << p_bits));
 }
 
 int	Fixed::getRawBits() const
 {
-	std::cout << "getRawBits function called" << std::endl;
+	// std::cout << "getRawBits function called" << std::endl;
 	return (this->p_value);
 }
 
 float	Fixed::toFloat(void) const
 {
-	std::cout << "Float conversion function called" << std::endl;
+	// std::cout << "Float conversion function called" << std::endl;
 	return ((p_value / (float)(1 << p_bits)));
 }
 
 int		Fixed::toInt(void) const
 {
-	std::cout << "Int conversion function called" << std::endl;
+	// std::cout << "Int conversion function called" << std::endl;
 	return (p_value >> p_bits);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	std::cout << "setRawBits function called" << std::endl;
+	// std::cout << "setRawBits function called" << std::endl;
 	p_value = raw;
 }
 
