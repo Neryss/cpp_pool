@@ -139,7 +139,7 @@ Fixed	&min(Fixed &a, Fixed &b)
 	return (b);
 }
 
-Fixed const	&min(const Fixed &a, const Fixed &b)
+Fixed const	&Fixed::min(const Fixed &a, const Fixed &b)
 {
 	if (a.toFloat() < b.toFloat())
 		return (a);

@@ -34,12 +34,7 @@ class	Fixed
 		bool	operator==(const Fixed &other);
 		bool	operator!=(const Fixed &other);
 		Fixed			&min(Fixed &a, Fixed &b);
-		static Fixed const		&min(const Fixed &a, const Fixed &b)
-		{
-			if (a.toFloat() < b.toFloat())
-				return (a);
-			return (b);
-		};
+		static Fixed const		&min(const Fixed &a, const Fixed &b);
 };
 
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1);
