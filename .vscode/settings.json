@@ -64,6 +64,9 @@
 		"*.tcc": "cpp",
 		"clocale": "cpp",
 		"memory_resource": "cpp",
-		"random": "cpp"
+		"random": "cpp",
+		"deque": "cpp",
+		"fstream": "cpp",
+		"stack": "cpp"
 	}
 }
