@@ -139,6 +139,13 @@ Fixed	&min(Fixed &a, Fixed &b)
 	return (b);
 }
 
+Fixed	&min(const Fixed &a, const Fixed &b)
+{
+	if (a.toFloat() < b.toFloat())
+		return (a);
+	return (b);
+}
+
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1)
 {
 	os << f1.toFloat();
