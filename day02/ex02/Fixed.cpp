@@ -2,31 +2,36 @@
 
 Fixed::Fixed()
 {
-	std::cout << "Default constructor called" << std::endl;
+	if (DEBUG)
+		std::cout << "Default constructor called" << std::endl;
 	p_value = 0;
 }
 
 Fixed::Fixed(const Fixed &f1)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	if (DEBUG)
+		std::cout << "Copy constructor called" << std::endl;
 	*this = f1;
 }
 
 Fixed::Fixed(const int raw)
 {
-	std::cout << "int constructor called" << std::endl;
+	if (DEBUG)
+		std::cout << "int constructor called" << std::endl;
 	p_value = raw << p_bits;
 }
 
 Fixed::Fixed(const float f_raw)
 {
-	std::cout << "float constructor called" << std::endl;
+	if (DEBUG)
+		std::cout << "float constructor called" << std::endl;
 	p_value = roundf(f_raw * (1 << p_bits));
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	if (DEBUG)
+		std::cout << "Destructor called" << std::endl;
 }
 
 int	Fixed::getRawBits() const
@@ -51,7 +56,8 @@ void	Fixed::setRawBits(int const raw)
 
 Fixed	&Fixed::operator=(const Fixed &other)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	if (DEBUG)
+		std::cout << "Assignation operator called" << std::endl;
 	p_value = other.getRawBits();
 	return (*this);
 }
@@ -142,6 +148,20 @@ Fixed	&min(Fixed &a, Fixed &b)
 Fixed const	&Fixed::min(const Fixed &a, const Fixed &b)
 {
 	if (a.toFloat() < b.toFloat())
+		return (a);
+	return (b);
+}
+
+Fixed	&max(Fixed &a, Fixed &b)
+{
+	if (a > b)
+		return (a);
+	return (b);
+}
+
+Fixed const	&Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if (a.toFloat() > b.toFloat())
 		return (a);
 	return (b);
 }

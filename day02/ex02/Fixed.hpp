@@ -5,6 +5,8 @@
 #include <string>
 #include <cmath>
 
+#define DEBUG 0
+
 class	Fixed
 {
 	private:
@@ -33,8 +35,10 @@ class	Fixed
 		bool	operator>=(const Fixed &other);
 		bool	operator==(const Fixed &other);
 		bool	operator!=(const Fixed &other);
-		Fixed			&min(Fixed &a, Fixed &b);
+		static Fixed			&min(Fixed &a, Fixed &b);
 		static Fixed const		&min(const Fixed &a, const Fixed &b);
+		static Fixed const		&max(const Fixed &a, const Fixed &b);
+		static Fixed const		&max(Fixed &a, Fixed &b);
 };
 
 std::ostream	&operator<<(std::ostream &os, const Fixed &f1);
