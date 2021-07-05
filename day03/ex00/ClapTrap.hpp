@@ -18,7 +18,6 @@ class	ClapTrap
 		ClapTrap(std::string name)
 		:_name(name), _hitpoints(10), _mana(10), _ad(0)
 		{};
-		
 		ClapTrap(const ClapTrap *other);
 		~ClapTrap();
 		ClapTrap	&operator=(const ClapTrap *other);
