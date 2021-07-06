@@ -2,5 +2,9 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "<" + _name + ">" << std::endl;
+	std::cout << "<" + _name + "> is alive!" << std::endl;
+}
+
+ScavTrap::~ScavTrap()
+{
 }
