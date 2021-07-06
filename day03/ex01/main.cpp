@@ -14,5 +14,7 @@ int	main(void)
 	// enemy.attack("clapi");
 	// clapi.takeDamage(clapi.get_ad());
 	test.attack("yikes");
+	test.guardGate();
+	test.guardGate();
 	return (0);
 }

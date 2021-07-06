@@ -5,11 +5,13 @@
 
 class ScavTrap: public	ClapTrap
 {
-	
+	private:
+		bool	_guarding;
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);
 		~ScavTrap();
+		void	guardGate();
 };
 
 #endif
