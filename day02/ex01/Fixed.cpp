@@ -9,7 +9,7 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &f1)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = f1;
+	p_value = f1.p_value;
 }
 
 Fixed::Fixed(const int raw)
