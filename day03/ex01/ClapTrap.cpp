@@ -52,3 +52,10 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "<" << _name << "> has healed " << amount << " hp" << std::endl;
 	std::cout << "He now has " << _hitpoints << " hitpoints" << std::endl;
 }
+
+void	ClapTrap::displayStats()
+{
+	std::cout << "<" + _name + ">: " << "[HP] " << _hitpoints << std::endl;
+	std::cout << "[MANA] " << _mana << std::endl;
+	std::cout << "[AD] " << _ad << std::endl;
+}

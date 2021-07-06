@@ -18,6 +18,7 @@ class	ClapTrap
 		~ClapTrap();
 		ClapTrap	&operator=(const ClapTrap *other);
 		int		get_ad();
+		void	displayStats();
 		void	attack(std::string const &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);

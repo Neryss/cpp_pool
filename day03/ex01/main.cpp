@@ -3,7 +3,7 @@
 
 int	main(void)
 {
-	// ClapTrap	clapi("clapi");
+	ClapTrap	clapi("clapi");
 	// ClapTrap	clone(clapi);
 	// ClapTrap	enemy("enemy");
 	ScavTrap	test("yo");
@@ -15,6 +15,9 @@ int	main(void)
 	// clapi.takeDamage(clapi.get_ad());
 	test.attack("yikes");
 	test.guardGate();
+	test.displayStats();
+	clapi.attack("yo");
+	test.takeDamage(clapi.get_ad());
 	test.guardGate();
 	return (0);
 }
