@@ -30,5 +30,8 @@ int	main(void)
 		std::cout << "c " << c << " is equal to b " << b << std::endl;
 	if (a != b)
 		std::cout << "a " << a << " is different than b " << b << std::endl;
+	Fixed	test;
+	test = b;
+	std::cout << "b is " << b << " equals to test " << test << std::endl;
 	return (0);
 }
