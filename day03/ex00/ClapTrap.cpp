@@ -23,9 +23,14 @@ ClapTrap::~ClapTrap()
 	std::cout << "<" << _name << "> Is now a pile of scraps" << std::endl;
 }
 
+int		ClapTrap::get_ad()
+{
+	return (_ad);
+}
+
 void	ClapTrap::attack(std::string const &name)
 {
-	std::cout << "<" << _name << "> attacks " << name << ", causing " << _ad << " points of damage!" << std::endl;
+	std::cout << "<" << _name << "> attacks <" << name << ">, causing " << _ad << " points of damage!" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -37,6 +42,12 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
+	if (_mana <= 0)
+	{
+		std::cout << "<" << _name << "> doesn't have enough mana" << std::endl;
+		return ;
+	}
+	_mana -= 1;
 	_hitpoints += amount;
 	std::cout << "<" << _name << "> has healed " << amount << " hp" << std::endl;
 	std::cout << "He now has " << _hitpoints << " hitpoints" << std::endl;
