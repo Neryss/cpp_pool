@@ -26,11 +26,6 @@ void	ScavTrap::attack(std::string name)
 	std::cout << "<SCAV_TRAP>-" + _name << " throws rocks on " << name << " for " << _ad << " damage!" << std::endl;
 }
 
-ScavTrap::ScavTrap	&operator=(const ScavTrap *other)
-{
-
-}
-
 void	ScavTrap::guardGate()
 {
 	if (!_guarding)

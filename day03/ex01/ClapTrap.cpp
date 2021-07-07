@@ -53,6 +53,12 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "He now has " << _hitpoints << " hitpoints" << std::endl;
 }
 
+ClapTrap	&ClapTrap::operator=(const ClapTrap *other)
+{
+	(void)other;
+	return (*this);
+}
+
 void	ClapTrap::displayStats()
 {
 	std::cout << "<" + _name + ">: " << "[HP] " << _hitpoints << std::endl;
