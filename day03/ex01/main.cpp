@@ -3,18 +3,15 @@
 
 int	main(void)
 {
-	ScavTrap	scavi("Scavi");
-	ScavTrap	potiron("Potiron");
-	ScavTrap	copy(potiron);
-	ScavTrap	clone;
+	ClapTrap	scavi("Clapi");
+	ScavTrap	enemy("bad-scavi");
 
-	clone.displayStats();
-	potiron.takeDamage(10);
-	clone = potiron;
-	potiron.takeDamage(10);
-	clone.displayStats();
-
-	// scavi.attack("potiron");
-	// potiron.displayStats();
+	scavi.attack("bad-scavi");
+	enemy.takeDamage(scavi.get_ad());
+	enemy.guardGate();
+	scavi.attack("bad-scavi");
+	enemy.takeDamage(scavi.get_ad());
+	enemy.beRepaired(enemy.get_ad() / 2);
+	enemy.guardGate();
 	return (0);
 }
