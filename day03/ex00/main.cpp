@@ -11,5 +11,7 @@ int	main(void)
 	enemy.beRepaired(1);
 	enemy.attack("clapi");
 	clapi.takeDamage(clapi.get_ad());
+	clapi = enemy;
+	clapi.attack("enemy");
 	return (0);
 }
