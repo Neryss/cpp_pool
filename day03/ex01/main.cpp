@@ -8,10 +8,13 @@ int	main(void)
 	ScavTrap	copy(potiron);
 	ScavTrap	clone;
 
+	clone.displayStats();
+	potiron.takeDamage(10);
 	clone = potiron;
+	potiron.takeDamage(10);
+	clone.displayStats();
 
-	potiron.displayStats();
-	scavi.attack("potiron");
-	potiron.displayStats();
+	// scavi.attack("potiron");
+	// potiron.displayStats();
 	return (0);
 }
