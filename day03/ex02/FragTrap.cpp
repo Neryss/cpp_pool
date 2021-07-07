@@ -27,6 +27,14 @@ void	FragTrap::attack(std::string name)
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "<" + _name << "> *raises its hand* Wanna high five ?!" << std::endl;
-	
+	char	answer;
+	std::cout << "<" + _name << "> *raises its hand* Wanna high five ?! [y/n]" << std::endl;
+	std::cin >> answer;
+	if (std::cin.fail())
+	{
+		std::cout << "<" + _name << "> Did you even try ?" << std::endl;
+		std::cin.clear();
+		return ;
+	}
+	else if (answer == 'y')
 }
