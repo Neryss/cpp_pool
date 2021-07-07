@@ -14,7 +14,7 @@ class	ClapTrap
 	public:
 		ClapTrap();
 		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap *other);
+		ClapTrap(const ClapTrap &other);
 		~ClapTrap();
 		ClapTrap	&operator=(const ClapTrap *other);
 		int		get_ad();

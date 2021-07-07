@@ -12,8 +12,8 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "ClapTrap created using the name constructor" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap *other)
-:_name(other->_name), _hitpoints(other->_hitpoints), _mana(other->_mana), _ad(other->_ad)
+ClapTrap::ClapTrap(const ClapTrap &other)
+:_name(other._name), _hitpoints(other._hitpoints), _mana(other._mana), _ad(other._ad)
 {
 	std::cout << "Copy constructor called" << std::endl;
 }
