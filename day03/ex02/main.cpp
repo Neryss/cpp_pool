@@ -1,17 +1,17 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
 	ClapTrap	scavi("Clapi");
-	ScavTrap	enemy("bad-scavi");
+	FragTrap	enemy("bad-scavi");
 
 	scavi.attack("bad-scavi");
 	enemy.takeDamage(scavi.get_ad());
-	enemy.guardGate();
 	scavi.attack("bad-scavi");
 	enemy.takeDamage(scavi.get_ad());
 	enemy.beRepaired(enemy.get_ad() / 2);
-	enemy.guardGate();
+	enemy.highFivesGuys();
 	return (0);
 }
