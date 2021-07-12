@@ -55,6 +55,9 @@ void	ClapTrap::beRepaired(unsigned int amount)
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap *other)
 {
-	(void)other;
+	_name = other->_name;
+	_hitpoints = other->_hitpoints;
+	_mana = other->_mana;
+	_ad = other->_ad;
 	return (*this);
 }

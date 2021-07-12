@@ -13,5 +13,4 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Frag
 DiamondTrap::~DiamondTrap()
 {
 	std::cout << "<" + _name + "> is a pile of diamonds now" << std::endl;
-	
 }
