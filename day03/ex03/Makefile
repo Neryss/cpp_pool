@@ -1,5 +1,5 @@
 all:
-	clang++ -Wall -Werror -Wextra *.cpp -o claptrap
+	clang++ -Wall -Werror -Wextra *.cpp -o diamondtrap
 
 clean:
-	@rm claptrap
+	@rm diamondtrap
