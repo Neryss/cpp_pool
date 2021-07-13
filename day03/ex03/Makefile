@@ -3,7 +3,7 @@ NAME = diamondtrap
 CC = clang++
 MAKE = make --no-print-directory
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 HEADERS = \
 		./ClapTrap.hpp \

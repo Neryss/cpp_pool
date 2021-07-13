@@ -9,6 +9,7 @@ DiamondTrap::DiamondTrap() : ClapTrap()
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), _name(name)
 {
+	_ad = FragTrap::get_ad();
 	std::cout << "<" + _name + "> Created!" << std::endl;
 }
 
@@ -45,6 +46,7 @@ std::ostream	&operator<<(std::ostream &os, const DiamondTrap &dp)
 {
 	os << "<" + dp.getName() + "> stats :" << std::endl;
 	os << "hp [" << dp.get_hp() << "]" << std::endl;
+	os << "ep [" << dp.get_ep() << "]" << std::endl;
 	os << "ad [" << dp.get_ad() << "]";
 	return (os);
 }

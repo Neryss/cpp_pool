@@ -2,11 +2,13 @@
 
 FragTrap::FragTrap() : ClapTrap()
 {
+	_ad = 30;
 	std::cout << "[FragTrap] <" + _name << "> Is born!" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
+	_ad = 30;
 	std::cout << "[FragTrap] <" + name << "> has been given a name!" << std::endl;
 }
 

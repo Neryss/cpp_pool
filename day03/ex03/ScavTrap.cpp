@@ -26,6 +26,11 @@ void	ScavTrap::attack(std::string name)
 	std::cout << "<SCAV_TRAP>-" + _name << " throws rocks on " << name << " for " << _ad << " damage!" << std::endl;
 }
 
+int	ScavTrap::get_mana()
+{
+	return (_mana);
+}
+
 void	ScavTrap::guardGate()
 {
 	if (!_guarding)

@@ -7,6 +7,8 @@ int	main(void)
 {
 	DiamondTrap test("Hello");
 
-	// std::cout << test << std::endl;
+	std::cout << test << std::endl;
 	test.attack("other");
+	test.highFivesGuys();
+	test.guardGate();
 }
