@@ -5,5 +5,7 @@
 
 int	main(void)
 {
-	DiamondTrap("Hello");
+	DiamondTrap test("Hello");
+
+	std::cout << test << std::endl;
 }
