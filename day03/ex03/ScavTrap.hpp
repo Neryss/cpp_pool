@@ -7,8 +7,8 @@ class ScavTrap: virtual public ClapTrap
 {
 	private:
 		bool	_guarding;
-	public:
 		ScavTrap();
+	public:
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &other);
 		void	attack(std::string name);
