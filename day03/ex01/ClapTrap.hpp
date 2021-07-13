@@ -11,8 +11,8 @@ class	ClapTrap
 		int			_hitpoints;
 		int			_mana;
 		int			_ad;
-		ClapTrap();
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &other);
 		~ClapTrap();
