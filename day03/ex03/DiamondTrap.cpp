@@ -42,6 +42,11 @@ const int	&DiamondTrap::get_ep() const
 
 //OTHER
 
+void	DiamondTrap::whoAmI()
+{
+	std::cout << "<" + _name + "> Claptrap name is : [" << ClapTrap::_name << "]" << std::endl;
+}
+
 std::ostream	&operator<<(std::ostream &os, const DiamondTrap &dp)
 {
 	os << "<" + dp.getName() + "> stats :" << std::endl;

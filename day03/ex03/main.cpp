@@ -11,4 +11,5 @@ int	main(void)
 	test.attack("other");
 	test.highFivesGuys();
 	test.guardGate();
+	test.whoAmI();
 }

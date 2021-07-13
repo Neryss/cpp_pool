@@ -18,6 +18,7 @@ class	DiamondTrap : public FragTrap, public ScavTrap
 		const int			&get_hp() const;
 		const int			&get_ep() const;
 		using ScavTrap::attack;
+		void				whoAmI();
 };
 
 std::ostream	&operator<<(std::ostream &os, const DiamondTrap &dp);
