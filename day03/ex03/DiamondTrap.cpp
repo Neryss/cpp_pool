@@ -9,8 +9,8 @@ DiamondTrap::DiamondTrap() : ClapTrap()
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), _name(name)
 {
-	_ad = FragTrap::get_ad();
-	std::cout << "<" + _name + "> Created!" << std::endl;
+	_ad = FragTrap::_ad;
+	std::cout << "<" + _name + "> Created!" << FragTrap::_ad << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()

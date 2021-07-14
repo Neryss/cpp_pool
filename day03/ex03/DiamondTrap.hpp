@@ -20,6 +20,7 @@ class	DiamondTrap : public FragTrap, public ScavTrap
 		const int			&get_ep() const;
 		using ScavTrap::attack;
 		void				whoAmI();
+		using	FragTrap::get_ad;
 		
 };
 
