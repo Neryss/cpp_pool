@@ -18,6 +18,7 @@ class	DiamondTrap : public FragTrap, public ScavTrap
 		const int			&get_ad() const;
 		const int			&get_hp() const;
 		const int			&get_ep() const;
+		DiamondTrap	&operator=(const DiamondTrap &other);
 		using ScavTrap::attack;
 		void				whoAmI();
 		using	FragTrap::get_ad;

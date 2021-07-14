@@ -16,8 +16,12 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	std::cout << "[FragTrap] <" + name << "> has been given a name!" << _ad << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
+FragTrap::FragTrap(const FragTrap &other)
 {
+	_name = other._name;
+	_hitpoints = other._hitpoints;
+	_ad = other._ad;
+	_mana = other._mana;
 	std::cout << "[FragTrap] <" + _name << "> Created by copy!" << std::endl;
 }
 

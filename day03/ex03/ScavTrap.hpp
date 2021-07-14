@@ -5,7 +5,7 @@
 
 class ScavTrap: virtual public	ClapTrap
 {
-	private:
+	protected:
 		bool	_guarding;
 	public:
 		ScavTrap();
