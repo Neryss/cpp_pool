@@ -20,6 +20,15 @@ FragTrap::~FragTrap()
 	std::cout << "[FragTrap] <" + _name << "> Has been destroyed :sadge:" << std::endl;
 }
 
+FragTrap	&FragTrap::operator=(const FragTrap &other)
+{
+	_name = other._name;
+	_hitpoints = other._hitpoints;
+	_ad = other._ad;
+	_mana = other._ad;
+	return (*this);
+}
+
 void	FragTrap::attack(std::string name)
 {
 	std::cout << "[FragTrap] <" + _name << "> Thrown its eye onto " + name + " face, ouch!" << std::endl;

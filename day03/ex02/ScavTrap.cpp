@@ -28,6 +28,16 @@ ScavTrap::~ScavTrap()
 	std::cout << "<" + _name + "> was such a good Scav..." << std::endl;
 }
 
+ScavTrap	&ScavTrap::operator=(const ScavTrap &other)
+{
+	_guarding = other._guarding;
+	_name = other._name;
+	_hitpoints = other._hitpoints;
+	_mana = other._mana;
+	_ad = other._ad;
+	return (*this);
+}
+
 void	ScavTrap::attack(std::string name)
 {
 	std::cout << "<SCAV_TRAP>-" + _name << " throws rocks on " << name << " for " << _ad << " damage!" << std::endl;
