@@ -22,6 +22,8 @@ DiamondTrap::~DiamondTrap()
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy)
 {
+	ClapTrap::_name = copy.ClapTrap::_name;
+	std::cout << "[" << copy.ClapTrap::_name << "]" << std::endl;
 	_name = copy._name;
 	_hitpoints = copy._hitpoints;
 	_ad = copy._ad;
@@ -55,6 +57,7 @@ const int	&DiamondTrap::get_ep() const
 
 DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &other)
 {
+	ClapTrap::_name = other.ClapTrap::_name;
 	_name = other._name;
 	_hitpoints = other._hitpoints;
 	_ad = other._ad;
