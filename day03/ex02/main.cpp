@@ -7,6 +7,7 @@ int	main(void)
 	ClapTrap	scavi("Clapi");
 	FragTrap	enemy("bad-scavi");
 	FragTrap	test("bobert");
+	FragTrap	clone(test);
 
 	scavi.attack("bad-scavi");
 	enemy.takeDamage(scavi.get_ad());
@@ -15,5 +16,6 @@ int	main(void)
 	enemy.beRepaired(enemy.get_ad() / 2);
 	enemy.highFivesGuys();
 	enemy = test;
+	clone.attack("idk");
 	return (0);
 }
