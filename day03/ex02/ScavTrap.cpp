@@ -18,8 +18,12 @@ ScavTrap::ScavTrap() : ClapTrap()
 	std::cout << "Scavtrap created using default constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+ScavTrap::ScavTrap(const ScavTrap &other)
 {
+	_name = other._name;
+	_hitpoints = other._hitpoints;
+	_ad = other._ad;
+	_mana = other._mana;
 	_guarding = other._guarding;
 	std::cout << "Scavtrap copy constructor called" << std::endl;
 }

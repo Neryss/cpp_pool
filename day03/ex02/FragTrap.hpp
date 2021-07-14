@@ -3,7 +3,7 @@
 
 #include "ClapTrap.hpp"
 
-class	FragTrap: public ClapTrap
+class	FragTrap: virtual public ClapTrap
 {
 	public:
 		FragTrap();
@@ -12,6 +12,7 @@ class	FragTrap: public ClapTrap
 		~FragTrap();
 		void		attack(std::string name);
 		void		highFivesGuys(void);
+		const int	&get_ad();
 		FragTrap	&operator=(const FragTrap &other);
 };
 

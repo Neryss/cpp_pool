@@ -13,17 +13,26 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_hitpoints = 100;
 	_mana = 100;
 	_ad = 30;
-	std::cout << "[FragTrap] <" + name << "> has been given a name!" << std::endl;
+	std::cout << "[FragTrap] <" + name << "> has been given a name!" << _ad << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
+FragTrap::FragTrap(const FragTrap &other)
 {
+	_name = other._name;
+	_hitpoints = other._hitpoints;
+	_ad = other._ad;
+	_mana = other._mana;
 	std::cout << "[FragTrap] <" + _name << "> Created by copy!" << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
 	std::cout << "[FragTrap] <" + _name << "> Has been destroyed :sadge:" << std::endl;
+}
+
+const int &FragTrap::get_ad()
+{
+	return (_ad);
 }
 
 FragTrap	&FragTrap::operator=(const FragTrap &other)
