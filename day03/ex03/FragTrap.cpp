@@ -13,7 +13,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_hitpoints = 100;
 	_mana = 100;
 	_ad = 30;
-	std::cout << "[FragTrap] <" + name << "> has been given a name!" << _ad << std::endl;
+	std::cout << "[FragTrap] <" + name << "> has been given a name!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &other)

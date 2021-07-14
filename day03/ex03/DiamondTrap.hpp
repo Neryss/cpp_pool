@@ -14,14 +14,13 @@ class	DiamondTrap : public FragTrap, public ScavTrap
 		DiamondTrap(std::string name);
 		DiamondTrap(const DiamondTrap &copy);
 		~DiamondTrap();
+		using ScavTrap::attack;
+		DiamondTrap	&operator=(const DiamondTrap &other);
 		const std::string	&getName() const;
 		const int			&get_ad() const;
 		const int			&get_hp() const;
 		const int			&get_ep() const;
-		DiamondTrap	&operator=(const DiamondTrap &other);
-		using ScavTrap::attack;
 		void				whoAmI();
-		using	FragTrap::get_ad;
 		
 };
 

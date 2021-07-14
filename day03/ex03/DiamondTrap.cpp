@@ -12,7 +12,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name), Sca
 	ClapTrap::_name += "_clap_name";
 	_ad = 30;
 	_name = name;
-	std::cout << "<" + _name + "> Created!" << _ad << std::endl;
+	std::cout << "<" + _name + "> Created!" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -23,7 +23,7 @@ DiamondTrap::~DiamondTrap()
 DiamondTrap::DiamondTrap(const DiamondTrap &copy)
 {
 	ClapTrap::_name = copy.ClapTrap::_name;
-	std::cout << "[" << copy.ClapTrap::_name << "]" << std::endl;
+	std::cout << "[" << copy.ClapTrap::_name << "] Created by copy" << std::endl;
 	_name = copy._name;
 	_hitpoints = copy._hitpoints;
 	_ad = copy._ad;
