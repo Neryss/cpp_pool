@@ -1,13 +1,13 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-:_name("bob"), _hitpoints(100), _mana(50), _ad(20)
+:_name("bob"), _hitpoints(10), _mana(10), _ad(0)
 {
 	std::cout << "ClapTrap created using the default constr" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
-:_name(name), _hitpoints(100), _mana(50), _ad(20)
+:_name(name), _hitpoints(10), _mana(10), _ad(0)
 {
 	std::cout << "ClapTrap created using the name constructor" << std::endl;
 }

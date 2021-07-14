@@ -53,6 +53,11 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "He now has " << _hitpoints << " hitpoints" << std::endl;
 }
 
+void	ClapTrap::addToName(std::string suffix)
+{
+	_name.append(suffix);
+}
+
 ClapTrap	&ClapTrap::operator=(const ClapTrap &other)
 {
 	_name = other._name;

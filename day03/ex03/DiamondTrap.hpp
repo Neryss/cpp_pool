@@ -12,6 +12,7 @@ class	DiamondTrap : public FragTrap, public ScavTrap
 	public:
 		DiamondTrap();
 		DiamondTrap(std::string name);
+		DiamondTrap(const DiamondTrap &copy);
 		~DiamondTrap();
 		const std::string	&getName() const;
 		const int			&get_ad() const;
@@ -19,6 +20,7 @@ class	DiamondTrap : public FragTrap, public ScavTrap
 		const int			&get_ep() const;
 		using ScavTrap::attack;
 		void				whoAmI();
+		
 };
 
 std::ostream	&operator<<(std::ostream &os, const DiamondTrap &dp);

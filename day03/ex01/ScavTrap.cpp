@@ -2,12 +2,19 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+	_hitpoints = 100;
+	_mana = 50;
+	_ad = 20;
 	_guarding = false;
 	std::cout << "<" + _name + "> the Scav is alive!" << std::endl;
 }
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
+	_hitpoints = 100;
+	_mana = 50;
+	_ad = 20;
+	_guarding = false;
 	std::cout << "Scavtrap created using default constructor" << std::endl;
 }
 
