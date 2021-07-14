@@ -2,17 +2,25 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+	_hitpoints = 100;
+	_mana = 50;
+	_ad = 20;
 	_guarding = false;
 	std::cout << "<" + _name + "> the Scav is alive!" << std::endl;
 }
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
+	_hitpoints = 100;
+	_mana = 50;
+	_ad = 20;
+	_guarding = false;
 	std::cout << "Scavtrap created using default constructor" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
+	_guarding = other._guarding;
 	std::cout << "Scavtrap copy constructor called" << std::endl;
 }
 
@@ -21,14 +29,19 @@ ScavTrap::~ScavTrap()
 	std::cout << "<" + _name + "> was such a good Scav..." << std::endl;
 }
 
+ScavTrap	&ScavTrap::operator=(const ScavTrap &other)
+{
+	_guarding = other._guarding;
+	_name = other._name;
+	_hitpoints = other._hitpoints;
+	_mana = other._mana;
+	_ad = other._ad;
+	return (*this);
+}
+
 void	ScavTrap::attack(std::string name)
 {
 	std::cout << "<SCAV_TRAP>-" + _name << " throws rocks on " << name << " for " << _ad << " damage!" << std::endl;
-}
-
-int	ScavTrap::get_mana()
-{
-	return (_mana);
 }
 
 void	ScavTrap::guardGate()

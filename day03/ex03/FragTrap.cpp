@@ -2,13 +2,11 @@
 
 FragTrap::FragTrap() : ClapTrap()
 {
-	_ad = 30;
 	std::cout << "[FragTrap] <" + _name << "> Is born!" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	_ad = 30;
 	std::cout << "[FragTrap] <" + name << "> has been given a name!" << std::endl;
 }
 
@@ -20,6 +18,15 @@ FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
 FragTrap::~FragTrap()
 {
 	std::cout << "[FragTrap] <" + _name << "> Has been destroyed :sadge:" << std::endl;
+}
+
+FragTrap	&FragTrap::operator=(const FragTrap &other)
+{
+	_name = other._name;
+	_hitpoints = other._hitpoints;
+	_ad = other._ad;
+	_mana = other._ad;
+	return (*this);
 }
 
 void	FragTrap::attack(std::string name)

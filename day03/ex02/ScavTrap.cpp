@@ -20,6 +20,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
+	_guarding = other._guarding;
 	std::cout << "Scavtrap copy constructor called" << std::endl;
 }
 
