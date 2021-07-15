@@ -38,7 +38,7 @@ int	main(void)
 	std::cout << "------- OPERATOR -------" << std::endl;
 	b = a;
 	b.whoAmI();
-	// c.whoAmI();
+	c.whoAmI();
 
 	std::cout << "------- DESTRUCTORS -------" << std::endl;
 	return (0);
