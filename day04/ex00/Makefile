@@ -7,10 +7,14 @@ CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 HEADERS = \
 		./Animal.hpp \
+		./Cat.hpp \
+		./dog.hpp \
 
 SRCS = \
 		./main.cpp \
 		./Animal.cpp \
+		./Cat.cpp \
+		./Dog.cpp \
 
 OBJS = $(SRCS:%.cpp=%.o)
 
