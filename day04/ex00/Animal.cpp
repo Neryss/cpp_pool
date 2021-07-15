@@ -20,5 +20,16 @@ Animal::Animal(const Animal &other)
 
 Animal::~Animal()
 {
-	std::cout << "[" << _type << "] got deleted!" << std::endl;
+	std::cout << "[" << _type << "] got deleted as an animal!" << std::endl;
+}
+
+Animal	&Animal::operator=(const Animal &other)
+{
+	_type = other._type;
+	return (*this);
+}
+
+void	Animal::makeSound()
+{
+	std::cout << "*makes natural and generic animal noises*" << std::endl;
 }
