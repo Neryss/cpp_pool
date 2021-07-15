@@ -1,4 +1,4 @@
-NAME = diamondtrap
+NAME = animal
 
 CC = clang++
 MAKE = make --no-print-directory
@@ -6,17 +6,11 @@ MAKE = make --no-print-directory
 CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 HEADERS = \
-		./ClapTrap.hpp \
-		./ScavTrap.hpp \
-		./FragTrap.hpp \
-		./DiamondTrap.hpp \
+		./Animal.hpp \
 
 SRCS = \
 		./main.cpp \
-		./ClapTrap.cpp \
-		./ScavTrap.cpp \
-		./FragTrap.cpp \
-		./DiamondTrap.cpp \
+		./Animal.cpp \
 
 OBJS = $(SRCS:%.cpp=%.o)
 
