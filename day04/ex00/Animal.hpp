@@ -3,8 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include "Cat.hpp"
-#include "Dog.hpp"
 
 class Animal
 {

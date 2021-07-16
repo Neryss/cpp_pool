@@ -8,7 +8,7 @@ CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 HEADERS = \
 		./Animal.hpp \
 		./Cat.hpp \
-		./dog.hpp \
+		./Dog.hpp \
 
 SRCS = \
 		./main.cpp \

@@ -19,6 +19,7 @@ Cat	&Cat::operator=(const Cat &other)
 {
 	_type = other._type;
 	std::cout << "*meow meow* oh wow! A cat has been cloned!" << std::endl;
+	return (*this);
 }
 
 void	Cat::makeSound()
