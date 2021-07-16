@@ -12,7 +12,7 @@ Dog::Dog(const Dog &other) : Animal(other)
 
 Dog::~Dog()
 {
-	std::cout << "*purr purr* a Dog went to sleep!" << std::endl;
+	std::cout << "*woooooof* a Dog went to sleep!" << std::endl;
 }
 
 Dog	&Dog::operator=(const Dog &other)
