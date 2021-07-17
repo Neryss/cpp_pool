@@ -9,7 +9,7 @@ Brain::Brain()
 					"peeing on the sofa",
 					"making some noise"};
 	for (int i = 0; i < 100; i++)
-		_ideas[i] = words[rand() % 6 + 1];
+		_ideas[i] = words[rand() % 6];
 	std::cout << "Brain created!" << std::endl;
 }
 
@@ -37,5 +37,5 @@ void	Brain::displayIdeas()
 {
 	std::cout << "Here are all their ideas" << std::endl;
 	for (int i = 0; i < 100; i++)
-		std::cout << _ideas[i] << std::endl;
+		std::cout << "[" << i + 1 << "]" << _ideas[i] << std::endl;
 }
