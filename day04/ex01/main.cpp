@@ -7,8 +7,10 @@
 int	main()
 {
 	Cat *test = new Cat();
+	Cat copy(*test);
 
 	test->printIdeas();
+	copy.printIdeas();
 	delete test;
 	return (0);
 }
