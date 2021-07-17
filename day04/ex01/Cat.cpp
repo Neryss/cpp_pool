@@ -8,7 +8,8 @@ Cat::Cat() : Animal("Cat")
 
 Cat::Cat(const Cat &other) : Animal(other)
 {
-	_brain = other._brain;
+	_brain = new Brain();
+	*_brain = Brain(*other._brain);
 	std::cout << "*meow meow* a cat has been copied!" << std::endl;
 }
 
@@ -20,7 +21,12 @@ Cat::~Cat()
 
 Cat	&Cat::operator=(const Cat &other)
 {
-	_type = other._type;
+	if (this != &other)
+	{
+		_type = other._type;
+		_brain = new Brain;
+		*_brain = Brain(*other._brain);
+	}
 	std::cout << "*meow meow* oh wow! A cat has been cloned!" << std::endl;
 	return (*this);
 }
