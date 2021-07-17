@@ -10,6 +10,12 @@ int	main()
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
+	std::cout << "[COPY CTORS AND = OPERATOR]" << std::endl;
+	const Animal origin("Origin");
+	const Animal other("Other");
+	Animal copied(origin);
+	copied = other;
+	std::cout << "[END OF COPY TESTS]" << std::endl;
 	std::cout << "[WRONG ANIMALS]" << std::endl;
 	const WrongAnimal* wmeta = new WrongAnimal();
 	const WrongAnimal* k = new WrongCat();
@@ -21,14 +27,14 @@ int	main()
 	std::cout << "[WRONG ANIMALS]" << std::endl;
 	std::cout << k->getType() << " \n" << std::endl;
 	std::cout << "----- MAKE SOUNDS -----" << std::endl;
-	i->makeSound(); //will output the cat sound!j->makeSound();meta->makeSound();4
+	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
 	std::cout << "[WRONG ANIMALS]" << std::endl;
 	k->makeSound();
-
 	wmeta->makeSound();
 	std::cout << std::endl;
+	std::cout << "----- DESTRUCTORS -----" << std::endl;
 	delete i;
 	delete j;
 	delete meta;
