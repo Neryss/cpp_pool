@@ -3,7 +3,7 @@ NAME = animal
 CC = clang++
 MAKE = make --no-print-directory
 
-CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
+CFLAGS = -Wall -Wextra -Werror
 
 HEADERS = \
 		./Animal.hpp \
