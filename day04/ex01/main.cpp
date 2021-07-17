@@ -6,6 +6,8 @@
 
 int	main()
 {
-	
+	Cat *test = new Cat();
+
+	test->printIdeas();
 	return (0);
 }

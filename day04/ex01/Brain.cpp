@@ -30,6 +30,7 @@ Brain	&Brain::operator=(const Brain &other)
 	for (int i = 0; i < 100; i++)
 		_ideas[i] = other._ideas[i];
 	std::cout << "Brain copy done!" << std::endl;
+	return (*this);
 }
 
 void	Brain::displayIdeas()

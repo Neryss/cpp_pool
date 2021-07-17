@@ -1,4 +1,4 @@
-NAME = animal
+NAME = brain
 
 CC = clang++
 MAKE = make --no-print-directory
@@ -11,6 +11,7 @@ HEADERS = \
 		./Dog.hpp \
 		./WrongAnimal.hpp \
 		./WrongCat.hpp \
+		./Brain.hpp \
 
 SRCS = \
 		./main.cpp \
@@ -19,6 +20,7 @@ SRCS = \
 		./Dog.cpp \
 		./WrongAnimal.cpp \
 		./WrongCat.cpp \
+		./Brain.cpp \
 
 OBJS = $(SRCS:%.cpp=%.o)
 

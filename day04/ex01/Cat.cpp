@@ -27,3 +27,8 @@ void	Cat::makeSound() const
 {
 	std::cout << "*meow meow* I'm a cat!" << std::endl;
 }
+
+void	Cat::printIdeas() const
+{
+	_brain->displayIdeas();
+}
