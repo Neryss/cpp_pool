@@ -8,12 +8,13 @@ Cat::Cat() : Animal("Cat")
 
 Cat::Cat(const Cat &other) : Animal(other)
 {
+	_brain = other._brain;
 	std::cout << "*meow meow* a cat has been copied!" << std::endl;
 }
 
 Cat::~Cat()
 {
-	delete _brain;
+	delete	_brain;
 	std::cout << "*purr purr* a cat went to sleep!" << std::endl;
 }
 

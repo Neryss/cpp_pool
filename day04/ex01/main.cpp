@@ -12,5 +12,9 @@ int	main()
 	test->printIdeas();
 	copy.printIdeas();
 	delete test;
+
+	// Brain	*br = new Brain();
+	// br->displayIdeas();
+	// delete br;
 	return (0);
 }

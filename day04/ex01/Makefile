@@ -3,7 +3,7 @@ NAME = brain
 CC = clang++
 MAKE = make --no-print-directory
 
-CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
+CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -g
 
 HEADERS = \
 		./Animal.hpp \
