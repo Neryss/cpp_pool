@@ -13,6 +13,7 @@ Dog::Dog(const Dog &other) : Animal(other)
 
 Dog::~Dog()
 {
+	delete _brain;
 	std::cout << "*woooooof* a Dog went to sleep!" << std::endl;
 }
 

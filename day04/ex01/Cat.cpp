@@ -13,6 +13,7 @@ Cat::Cat(const Cat &other) : Animal(other)
 
 Cat::~Cat()
 {
+	delete _brain;
 	std::cout << "*purr purr* a cat went to sleep!" << std::endl;
 }
 

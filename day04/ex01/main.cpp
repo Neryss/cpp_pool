@@ -9,5 +9,6 @@ int	main()
 	Cat *test = new Cat();
 
 	test->printIdeas();
+	delete test;
 	return (0);
 }
