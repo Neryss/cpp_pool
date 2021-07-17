@@ -6,6 +6,7 @@
 
 int	main()
 {
+	// DO DOGE
 	Animal	*array = new Animal[10];
 	for (int i  = 0; i < 5; i++)
 		array[i] = Cat();

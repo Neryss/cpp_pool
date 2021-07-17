@@ -15,7 +15,7 @@ Cat::Cat(const Cat &other) : Animal(other)
 
 Cat::~Cat()
 {
-	delete	_brain;
+	delete _brain;
 	std::cout << "*purr purr* a cat went to sleep!" << std::endl;
 }
 
@@ -24,7 +24,7 @@ Cat	&Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		_type = other._type;
-		_brain = new Brain;
+		_brain = new Brain();
 		*_brain = Brain(*other._brain);
 	}
 	std::cout << "*meow meow* oh wow! A cat has been cloned!" << std::endl;
