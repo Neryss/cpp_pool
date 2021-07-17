@@ -25,7 +25,5 @@ int	main()
 	test->getBrain()->displayIdeas(1);
 	delete test;
 	delete [] array;
-	// for (int i = 0; i < 10; i++)
-	// 	delete
 	return (0);
 }
