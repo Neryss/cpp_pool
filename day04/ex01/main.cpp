@@ -6,9 +6,16 @@
 
 int	main()
 {
-	Cat *test = new Cat();
-	Cat copy(*test);
+	Animal	*array = new Animal[10];
+	for (int i  = 0; i < 5; i++)
+		array[i] = Cat();
+	for (int i = 5; i < 10; i++)
+		array[i] = Dog();
+	Cat 	*test = new Cat();
+	Cat 	copy(*test);
 
+	for (int i = 0; i < 10; i++)
+		std::cout << "array of " << i << " is " << array[i].getType() << std::endl;
 	test->printIdeas();
 	copy.printIdeas();
 	std::cout << "test type" << test->getType() << std::endl;
@@ -17,9 +24,8 @@ int	main()
 	copy.getBrain()->displayIdeas(1);
 	test->getBrain()->displayIdeas(1);
 	delete test;
-
-	// Brain	*br = new Brain();
-	// br->displayIdeas();
-	// delete br;
+	delete [] array;
+	// for (int i = 0; i < 10; i++)
+	// 	delete
 	return (0);
 }
