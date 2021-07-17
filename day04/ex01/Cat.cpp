@@ -40,3 +40,8 @@ void	Cat::printIdeas() const
 {
 	_brain->displayIdeas();
 }
+
+Brain	*Cat::getBrain()
+{
+	return (_brain);
+}

@@ -11,6 +11,11 @@ int	main()
 
 	test->printIdeas();
 	copy.printIdeas();
+	std::cout << "test type" << test->getType() << std::endl;
+	std::cout << "copy type" << copy.getType() << std::endl;
+	test->getBrain()->setIdea(0, "UNKNOWN");
+	copy.getBrain()->displayIdeas(1);
+	test->getBrain()->displayIdeas(1);
 	delete test;
 
 	// Brain	*br = new Brain();
