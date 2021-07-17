@@ -2,6 +2,7 @@
 
 Cat::Cat() : Animal("Cat")
 {
+	_brain = new Brain();
 	std::cout << "*meow meow* a cat has been created!" << std::endl;
 }
 

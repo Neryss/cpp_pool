@@ -9,7 +9,7 @@ Brain::Brain()
 					"peeing on the sofa",
 					"making some noise"};
 	for (int i = 0; i < 100; i++)
-		_ideas[i] = words[rand() % 100 + 1];
+		_ideas[i] = words[rand() % 6 + 1];
 	std::cout << "Brain created!" << std::endl;
 }
 
@@ -22,12 +22,14 @@ Brain::Brain(const Brain &other)
 
 Brain::~Brain()
 {
-
+	std::cout << "Brain deleted!" << std::endl;
 }
 
 Brain	&Brain::operator=(const Brain &other)
 {
-
+	for (int i = 0; i < 100; i++)
+		_ideas[i] = other._ideas[i];
+	std::cout << "Brain copy done!" << std::endl;
 }
 
 void	Brain::displayIdeas()

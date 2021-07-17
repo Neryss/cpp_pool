@@ -2,6 +2,7 @@
 
 Dog::Dog() : Animal("Dog")
 {
+	_brain = new Brain();
 	std::cout << "*woof woof* a Dog has been created!" << std::endl;
 }
 
