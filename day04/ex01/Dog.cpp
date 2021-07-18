@@ -8,6 +8,8 @@ Dog::Dog() : Animal("Dog")
 
 Dog::Dog(const Dog &other) : Animal(other)
 {
+	_brain = new Brain();
+	*_brain = Brain(*other._brain);
 	std::cout << "*woof woof* a Dog has been copied!" << std::endl;
 }
 
@@ -19,7 +21,12 @@ Dog::~Dog()
 
 Dog	&Dog::operator=(const Dog &other)
 {
-	_type = other._type;
+	if (this != &other)
+	{
+		_type = other._type;
+		_brain = new Brain;
+		*_brain = Brain(*other._brain);
+	}
 	std::cout << "*woof woof* oh wow! A Dog has been cloned!" << std::endl;
 	return (*this);
 }

@@ -12,19 +12,19 @@ int	main()
 		array[i] = Cat();
 	for (int i = 5; i < 10; i++)
 		array[i] = Dog();
-	Cat 	*test = new Cat();
-	Cat 	copy(*test);
+	Cat 	*cat = new Cat();
+	Cat 	copy(*cat);
 
 	for (int i = 0; i < 10; i++)
 		std::cout << "array of " << i << " is " << array[i].getType() << std::endl;
-	test->printIdeas();
+	cat->printIdeas();
 	copy.printIdeas();
-	std::cout << "test type" << test->getType() << std::endl;
+	std::cout << "test type" << cat->getType() << std::endl;
 	std::cout << "copy type" << copy.getType() << std::endl;
-	test->getBrain()->setIdea(0, "UNKNOWN");
+	cat->getBrain()->setIdea(0, "UNKNOWN");
 	copy.getBrain()->displayIdeas(1);
-	test->getBrain()->displayIdeas(1);
-	delete test;
+	cat->getBrain()->displayIdeas(1);
+	delete cat;
 	delete [] array;
 	return (0);
 }
