@@ -6,11 +6,8 @@
 
 int	main()
 {
-	Animal	*array = new Animal[10];
-	for (int i  = 0; i < 5; i++)
-		array[i] = Cat();
-	for (int i = 5; i < 10; i++)
-		array[i] = Dog();
+	// Animal	cant();
+	// Animal	*cant = new Animal();
 	Cat 	*cat = new Cat();
 	Cat 	copy(*cat);
 	Dog		*dog = new Dog();
@@ -18,8 +15,6 @@ int	main()
 	std::cout << "----- COPY ASSIGNMENT -----" << std::endl;
 	dogy = dog;
 
-	for (int i = 0; i < 10; i++)
-		std::cout << "array of " << i << " is " << array[i].getType() << std::endl;
 	cat->printIdeas();
 	copy.printIdeas();
 	std::cout << "test type" << cat->getType() << std::endl;
@@ -29,7 +24,7 @@ int	main()
 	cat->getBrain()->displayIdeas(1);
 	delete cat;
 	delete dog;
+	std::cout << "Whut" << std::endl;
 	delete dogy;
-	delete [] array;
 	return (0);
 }
