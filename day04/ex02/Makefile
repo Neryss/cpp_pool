@@ -1,4 +1,4 @@
-NAME = abstract
+NAME = brain
 
 CC = clang++
 MAKE = make --no-print-directory

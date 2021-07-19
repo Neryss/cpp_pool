@@ -24,7 +24,7 @@ Dog	&Dog::operator=(const Dog &other)
 	if (this != &other)
 	{
 		_type = other._type;
-		_brain = new Brain();
+		_brain = new Brain;
 		*_brain = Brain(*other._brain);
 	}
 	std::cout << "*woof woof* oh wow! A Dog has been cloned!" << std::endl;
