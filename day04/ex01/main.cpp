@@ -15,8 +15,8 @@ int	main()
 	Cat 	copy(*cat);
 	Dog		*dog = new Dog();
 	Dog		*dogy = new Dog();
-	// std::cout << "----- COPY ASSIGNMENT -----" << std::endl;
-	// dogy = dog;
+	std::cout << "----- COPY ASSIGNMENT -----" << std::endl;
+	dogy = dog;
 
 	for (int i = 0; i < 10; i++)
 		std::cout << "array of " << i << " is " << array[i].getType() << std::endl;
