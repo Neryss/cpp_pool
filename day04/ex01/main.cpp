@@ -16,6 +16,7 @@ int	main()
 	Dog		*dog = new Dog();
 	Dog		*dogy = new Dog();
 	std::cout << "----- COPY ASSIGNMENT -----" << std::endl;
+	// SEGFAULT HERE IF DELETE
 	dogy = dog;
 
 	for (int i = 0; i < 10; i++)
