@@ -11,9 +11,9 @@ int	main()
 	Cat 	*cat = new Cat();
 	Cat 	copy(*cat);
 	Dog		*dog = new Dog();
-	Dog		*dogy = new Dog();
+	// Dog		*dogy = new Dog();
 	std::cout << "----- COPY ASSIGNMENT -----" << std::endl;
-	dogy = dog;
+	// dogy = dog;
 
 	cat->printIdeas();
 	copy.printIdeas();
@@ -25,6 +25,6 @@ int	main()
 	delete cat;
 	delete dog;
 	std::cout << "Whut" << std::endl;
-	delete dogy;
+	// delete dogy;
 	return (0);
 }
