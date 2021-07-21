@@ -16,8 +16,7 @@ int	main()
 	Dog		*dog = new Dog();
 	Dog		*dogy = new Dog();
 	std::cout << "----- COPY ASSIGNMENT -----" << std::endl;
-	// SEGFAULT HERE IF DELETE
-	dogy = dog;
+	*dogy = *dog;
 
 	for (int i = 0; i < 10; i++)
 		std::cout << "array of " << i << " is " << array[i].getType() << std::endl;
@@ -29,8 +28,8 @@ int	main()
 	copy.getBrain()->displayIdeas(1);
 	cat->getBrain()->displayIdeas(1);
 	delete cat;
-	// delete dog;
 	delete dogy;
+	delete dog;
 	delete [] array;
 	return (0);
 }
