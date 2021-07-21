@@ -30,7 +30,7 @@ int	main()
 	cat->getBrain()->displayIdeas(1);
 	delete cat;
 	// delete dog;
-	// delete dogy;
+	delete dogy;
 	delete [] array;
 	return (0);
 }
