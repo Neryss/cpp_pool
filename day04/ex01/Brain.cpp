@@ -2,7 +2,7 @@
 
 Brain::Brain()
 {
-	std::string words[] {"thinking",
+	std::string words[] = {"thinking",
 					"drinking",
 					"eating",
 					"playing", 
