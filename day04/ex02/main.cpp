@@ -24,7 +24,6 @@ int	main()
 	cat->getBrain()->displayIdeas(1);
 	delete cat;
 	delete dog;
-	// std::cout << "Whut" << std::endl;
 	delete dogy;
 	return (0);
 }
