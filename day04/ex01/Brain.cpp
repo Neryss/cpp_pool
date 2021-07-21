@@ -15,8 +15,8 @@ Brain::Brain()
 
 Brain::Brain(const Brain &other)
 {
-		for (int i = 0; i < 100; i++)
-			_ideas[i] = other._ideas[i];
+	for (int i = 0; i < 100; i++)
+		_ideas[i] = other._ideas[i];
 	std::cout << "Brain created from another one!" << std::endl;
 }
 
