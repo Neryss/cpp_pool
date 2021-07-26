@@ -4,7 +4,6 @@ Ice::Ice() : AMateria("ice")
 {
 }
 
-// Not sure
 Ice::Ice(const Ice &other) : AMateria(other)
 {
 }

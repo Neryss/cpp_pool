@@ -75,8 +75,6 @@ Character	&Character::operator=(const Character &other)
 
 Character::~Character()
 {
-	// for (int i = 0; i < 4; i++)
-	// 	delete _materia[i];
 	ft_lstclear(&_miam);
 }
 
@@ -97,7 +95,7 @@ void	Character::equip(AMateria *m)
 	}
 	ft_lstadd_back(&_miam, ft_lstnew(m));
 }
-// could create a leak if materia not deleted later
+
 void	Character::unequip(int idx)
 {
 	if (idx < 0 || idx > 3)
