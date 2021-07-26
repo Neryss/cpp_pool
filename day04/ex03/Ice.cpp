@@ -5,6 +5,7 @@ Ice::Ice() : AMateria("ice")
 	std::cout << "<" << _type << "> created" << std::endl;
 }
 
+// Not sure
 Ice::Ice(const Ice &other) : AMateria(other)
 {
 	std::cout << "<" << _type << "> copied" << std::endl;
@@ -12,7 +13,7 @@ Ice::Ice(const Ice &other) : AMateria(other)
 
 Ice::~Ice()
 {
-	std::cout << "Ice deleted" << std::endl;
+	std::cout << "ice deleted" << std::endl;
 }
 
 Ice	&Ice::operator=(const Ice &other)
