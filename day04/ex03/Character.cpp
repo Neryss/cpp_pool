@@ -1,6 +1,6 @@
-#include "ICharacter.hpp"
+#include "Character.hpp"
 
-ICharacter::ICharacter(const std::string name)
+Character::Character(const std::string name)
 :_name(name)
 {
 	for (int i = 0; i < 4; i++)
@@ -8,7 +8,7 @@ ICharacter::ICharacter(const std::string name)
 	std::cout << _name << " is born" << std::endl;
 }
 
-ICharacter::ICharacter(const ICharacter &other)
+Character::Character(const Character &other)
 :_name(other._name)
 {
 	for (int i = 0; i < 4; i++)
@@ -16,7 +16,7 @@ ICharacter::ICharacter(const ICharacter &other)
 	std::cout << _name << " borned by copy" << std::endl;
 }
 
-ICharacter	&ICharacter::operator=(const ICharacter &other)
+Character	&Character::operator=(const Character &other)
 {
 	if (this != &other)
 	{
@@ -27,18 +27,18 @@ ICharacter	&ICharacter::operator=(const ICharacter &other)
 	std::cout << _name << " assigned" << std::endl;
 }
 //shouldn't be able to to that
-ICharacter::~ICharacter()
+Character::~Character()
 {
 	delete _materia;
 	std::cout << "character now deleted" << std::endl;
 }
 
-std::string const	&ICharacter::getName() const
+std::string const	&Character::getName() const
 {
 	return (_name);
 }
 
-void	ICharacter::equip(AMateria *m)
+void	Character::equip(AMateria *m)
 {
 	for (int i = 0; i < 4; i++)
 	{
@@ -50,7 +50,7 @@ void	ICharacter::equip(AMateria *m)
 	}
 }
 // could create a leak if materia not deleted later
-void	ICharacter::unequip(int idx)
+void	Character::unequip(int idx)
 {
 	if (idx < 0 || idx > 3)
 	{
@@ -60,7 +60,7 @@ void	ICharacter::unequip(int idx)
 	_materia[idx] = 0;
 }
 
-void	ICharacter::use(int idx, ICharacter &target)
+void	Character::use(int idx, Character &target)
 {
-
+	_materia[idx]->use(target);
 }

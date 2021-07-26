@@ -11,7 +11,7 @@ class Cure : public AMateria
 		~Cure();
 		Cure		&operator=(const Cure &other);
 		AMateria	*clone() const;
-		void		use(ICharacter &target);
+		void		use(Character &target);
 };
 
 #endif

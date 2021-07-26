@@ -9,14 +9,14 @@ HEADERS = \
 		./AMateria.hpp \
 		./Cure.hpp \
 		./Ice.hpp \
-		./ICharacter.hpp \
+		./Character.hpp \
 
 SRCS = \
 		./main.cpp \
 		./AMateria.cpp \
 		./Cure.cpp \
 		./Ice.cpp \
-		./ICharacter.cpp \
+		./Character.cpp \
 
 OBJS = $(SRCS:%.cpp=%.o)
 
