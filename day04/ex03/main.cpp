@@ -7,6 +7,8 @@
 int	main()
 {
 	MateriaSource	*src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
 
 	delete src;
 	return (0);
