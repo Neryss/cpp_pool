@@ -12,6 +12,10 @@ int	main()
 
 	Character	*me = new Character("me");
 
+	AMateria	*tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+
 	delete me;
 	delete src;
 	return (0);
