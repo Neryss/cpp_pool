@@ -96,7 +96,7 @@ void	Character::equip(AMateria *m)
 		if (!_materia[i] && m)
 		{
 			_materia[i] = m;
-			return ;
+			break ;
 		}
 	}
 	ft_lstadd_back(&_miam, ft_lstnew(m));
