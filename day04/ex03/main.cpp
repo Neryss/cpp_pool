@@ -10,6 +10,9 @@ int	main()
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 
+	Character	*me = new Character("me");
+
+	delete me;
 	delete src;
 	return (0);
 }
