@@ -16,11 +16,12 @@ int	main()
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
-	//segfault if equiped several times
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
-	me->equip(tmp);
 	// me->equip(tmp);
+	// tmp = src->createMateria("cure");
+	// me->equip(tmp);
+	// tmp = src->createMateria("cure");
 	// me->equip(tmp);
 
 	Character	*bob = new Character("bob");
