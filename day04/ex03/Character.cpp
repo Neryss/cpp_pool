@@ -98,9 +98,8 @@ void	Character::equip(AMateria *m)
 
 void	Character::unequip(int idx)
 {
-	if (idx < 0 || idx > 3)
-		return ;
-	_materia[idx] = 0;
+	if (idx >= 0 || idx <= 3)
+		_materia[idx] = 0;
 }
 
 void	Character::use(int idx, ICharacter &target)
