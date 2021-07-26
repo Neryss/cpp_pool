@@ -64,5 +64,6 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, Character &target)
 {
-	_materia[idx]->use(target);
+	if (_materia[idx])
+		_materia[idx]->use(target);
 }
