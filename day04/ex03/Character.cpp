@@ -30,7 +30,8 @@ Character	&Character::operator=(const Character &other)
 //shouldn't be able to to that
 Character::~Character()
 {
-	delete _materia;
+	for (int i = 0; i < 4; i++)
+		delete _materia[i];
 	std::cout << "character now deleted" << std::endl;
 }
 

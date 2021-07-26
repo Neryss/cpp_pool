@@ -3,6 +3,8 @@
 
 #include "AMateria.hpp"
 
+class	AMateria;
+
 class	Character
 {
 	private:
@@ -13,7 +15,7 @@ class	Character
 		Character(const std::string name);
 		Character(const Character &other);
 		Character	&operator=(const Character &other);
-		virtual	~Character() {}
+		virtual	~Character();
 		virtual	std::string const	&getName() const = 0;
 		virtual	void				equip(AMateria *m) = 0;
 		virtual void				unequip(int idx) = 0;

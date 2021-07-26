@@ -27,7 +27,8 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource &other)
 
 MateriaSource::~MateriaSource()
 {
-	delete [] _materias;
+	for (int i = 0; i < 4; i++)
+		delete _materias[i];
 	std::cout << "Materia source deleted" << std::endl;
 }
 
