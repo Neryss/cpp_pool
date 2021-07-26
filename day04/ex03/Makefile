@@ -7,11 +7,15 @@ CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
 HEADERS = \
 		./AMateria.hpp \
+		./Cure.hpp \
+		./Ice.hpp \
 		./ICharacter.hpp \
 
 SRCS = \
 		./main.cpp \
 		./AMateria.cpp \
+		./Cure.cpp \
+		./Ice.cpp \
 		./ICharacter.cpp \
 
 OBJS = $(SRCS:%.cpp=%.o)
