@@ -25,6 +25,7 @@ Character	&Character::operator=(const Character &other)
 			_materia[i] = other._materia[i]->clone();
 	}
 	std::cout << _name << " assigned" << std::endl;
+	return (*this);
 }
 //shouldn't be able to to that
 Character::~Character()
