@@ -2,10 +2,11 @@
 #define Character_HPP
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class	AMateria;
 
-class	Character
+class	Character : public ICharacter
 {
 	private:
 		std::string	_name;
@@ -14,12 +15,12 @@ class	Character
 	public:
 		Character(const std::string name);
 		Character(const Character &other);
-		Character	&operator=(const Character &other);
-		virtual	~Character();
-		virtual	std::string const	&getName() const;
+		virtual Character	&operator=(const Character &other);
+		~Character();
+		std::string const	&getName() const;
 		virtual	void				equip(AMateria *m);
 		virtual void				unequip(int idx);
-		virtual void				use(int idx, Character &target);
+		virtual void				use(int idx, ICharacter &target);
 };
 
 #endif

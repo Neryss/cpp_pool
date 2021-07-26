@@ -5,7 +5,7 @@
 #include <string>
 #include "Character.hpp"
 
-class Character;
+class ICharacter;
 
 class AMateria
 {
@@ -20,7 +20,7 @@ class AMateria
 		AMateria			&operator=(AMateria const &other);
 		std::string const	&getType() const; //Returns the materia type
 		virtual AMateria	*clone() const = 0;
-		virtual void		use(Character &target);
+		virtual void		use(ICharacter &target);
 };
 
 #endif

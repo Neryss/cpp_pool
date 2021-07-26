@@ -62,7 +62,7 @@ void	Character::unequip(int idx)
 	_materia[idx] = 0;
 }
 
-void	Character::use(int idx, Character &target)
+void	Character::use(int idx, ICharacter &target)
 {
 	if (_materia[idx])
 		_materia[idx]->use(target);
