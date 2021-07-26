@@ -26,10 +26,41 @@ ICharacter	&ICharacter::operator=(const ICharacter &other)
 	}
 	std::cout << _name << " assigned" << std::endl;
 }
-
+//shouldn't be able to to that
 ICharacter::~ICharacter()
 {
 	delete _materia;
 	std::cout << "character now deleted" << std::endl;
 }
 
+std::string const	&ICharacter::getName() const
+{
+	return (_name);
+}
+
+void	ICharacter::equip(AMateria *m)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (!_materia[i] && m)
+		{
+			_materia[i] = m;
+			return ;
+		}
+	}
+}
+// could create a leak if materia not deleted later
+void	ICharacter::unequip(int idx)
+{
+	if (idx < 0 || idx > 3)
+	{
+		std::cout << "<unequip> index [0-3]" << std::endl;
+		return ;
+	}
+	_materia[idx] = 0;
+}
+
+void	ICharacter::use(int idx, ICharacter &target)
+{
+
+}
