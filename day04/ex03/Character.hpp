@@ -6,11 +6,18 @@
 
 class	AMateria;
 
+typedef struct s_list
+{
+	AMateria *materia;
+	struct s_list *next;
+}				t_list;
+
 class	Character : public ICharacter
 {
 	private:
 		std::string	_name;
 		AMateria	*_materia[4];
+		t_list	*_miam;
 		Character();
 	public:
 		Character(const std::string name);
