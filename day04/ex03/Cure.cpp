@@ -2,17 +2,14 @@
 
 Cure::Cure() : AMateria("cure")
 {
-	std::cout << "<" << _type << "> created" << std::endl;
 }
 
 Cure::Cure(const Cure &other) : AMateria(other)
 {
-	std::cout << "<" << _type << "> copied" << std::endl;
 }
 
 Cure::~Cure()
 {
-	std::cout << "cure deleted" << std::endl;
 }
 
 Cure	&Cure::operator=(const Cure &other)

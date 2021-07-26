@@ -2,18 +2,15 @@
 
 Ice::Ice() : AMateria("ice")
 {
-	std::cout << "<" << _type << "> created" << std::endl;
 }
 
 // Not sure
 Ice::Ice(const Ice &other) : AMateria(other)
 {
-	std::cout << "<" << _type << "> copied" << std::endl;
 }
 
 Ice::~Ice()
 {
-	std::cout << "ice deleted" << std::endl;
 }
 
 Ice	&Ice::operator=(const Ice &other)

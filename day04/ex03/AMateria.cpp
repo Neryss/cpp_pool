@@ -3,18 +3,15 @@
 AMateria::AMateria(std::string const &type)
 :_type(type)
 {
-	std::cout << "AMateria of type " << _type << "created" << std::endl;
 }
 
 AMateria::AMateria(const AMateria &other)
 :_type(other._type)
 {
-	std::cout << "AMateria of type " << _type << "created by copy" << std::endl;
 }
 
 AMateria::~AMateria()
 {
-	std::cout << "AMateria of type " << _type << "destroyed" << std::endl;
 }
 
 AMateria	&AMateria::operator=(const AMateria &other)
