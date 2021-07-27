@@ -23,15 +23,12 @@ int	main()
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-	// me->equip(tmp);
-	// me->equip(tmp);
-	// me->equip(tmp);
-	// me->equip(tmp);
 
 	Character	*bob = new Character("bob");
 	tmp = src->createMateria("cure");
+	Character	*boby = new Character(*bob);
 	bob->equip(tmp);
-	Character	*boby = bob;
+	bob->unequip(0);
 
 	me->use(0, *bob);
 	me->use(1, *boby);
@@ -41,6 +38,7 @@ int	main()
 
 	delete bob;
 	delete me;
+	delete boby;
 	delete src;
 	return (0);
 }

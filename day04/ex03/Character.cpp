@@ -64,7 +64,7 @@ Character::Character(const Character &other)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (_materia[i])
+		if (other._materia[i])
 		{
 			_materia[i] = other._materia[i]->clone();
 			ft_lstadd_back(&_miam, ft_lstnew(_materia[i]));
