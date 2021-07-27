@@ -23,6 +23,10 @@ int	main()
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
+	// me->equip(tmp);
+	// me->equip(tmp);
+	// me->equip(tmp);
+	// me->equip(tmp);
 
 	Character	*bob = new Character("bob");
 	tmp = src->createMateria("cure");

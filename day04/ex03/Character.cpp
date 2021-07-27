@@ -36,6 +36,13 @@ void ft_lstclear(t_list **lst)
 			tmp = (*lst)->next;
 			if ((*lst)->materia)
 			{
+				t_list	*miam = tmp;
+				while (miam)
+				{
+					if (miam->materia == (*lst)->materia)
+						miam->materia = 0;
+					miam = miam->next;
+				}
 				delete (*lst)->materia;
 				(*lst)->materia = 0;
 			}
@@ -56,7 +63,15 @@ Character::Character(const Character &other)
 :_name(other._name), _miam(0)
 {
 	for (int i = 0; i < 4; i++)
-		_materia[i] = other._materia[i]->clone();
+	{
+		if (_materia[i])
+		{
+			_materia[i] = other._materia[i]->clone();
+			ft_lstadd_back(&_miam, ft_lstnew(_materia[i]));
+		}
+		else
+			_materia[i] = 0;
+	}
 }
 
 Character	&Character::operator=(const Character &other)
@@ -66,8 +81,13 @@ Character	&Character::operator=(const Character &other)
 		_name = other._name;
 		for (int i = 0; i < 4; i++)
 		{
-			_materia[i] = other._materia[i]->clone();
-			ft_lstadd_back(&_miam, ft_lstnew(_materia[i]));
+			if (_materia[i])
+			{
+				_materia[i] = other._materia[i]->clone();
+				ft_lstadd_back(&_miam, ft_lstnew(_materia[i]));
+			}
+			else
+				_materia[i] = 0;
 		}
 	}
 	return (*this);
