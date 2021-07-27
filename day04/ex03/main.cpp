@@ -18,16 +18,19 @@ int	main()
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
-	// me->equip(tmp);
-	// tmp = src->createMateria("cure");
-	// me->equip(tmp);
-	// tmp = src->createMateria("cure");
-	// me->equip(tmp);
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
 
 	Character	*bob = new Character("bob");
+	tmp = src->createMateria("cure");
+	bob->equip(tmp);
+	Character	*boby = bob;
 
 	me->use(0, *bob);
-	me->use(1, *bob);
+	me->use(1, *boby);
 
 	me->unequip(1);
 	me->use(1, *bob);

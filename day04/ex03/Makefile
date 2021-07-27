@@ -3,7 +3,7 @@ NAME = amateria
 CC = clang++
 MAKE = make --no-print-directory
 
-CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 
 HEADERS = \
 		./AMateria.hpp \
