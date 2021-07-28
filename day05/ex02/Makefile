@@ -10,6 +10,7 @@ HEADERS = \
 		./Form.hpp \
 		./ShrubberyCreationForm.hpp \
 		./RobotomyRequestForm.hpp \
+		./PresidentialPardonForm.hpp \
 
 SRCS = \
 		./main.cpp \
@@ -17,6 +18,7 @@ SRCS = \
 		./Form.cpp \
 		./ShrubberyCreationForm.cpp \
 		./RobotomyRequestForm.cpp \
+		./PresidentialPardonForm.cpp \
 
 OBJS = $(SRCS:%.cpp=%.o)
 
