@@ -1,7 +1,7 @@
 #include "Form.hpp"
 
 Form::Form(const std::string name, const int sgrade, const int exgrade)
-:_name(name), _sGrade(sgrade), _exGrade(exgrade)
+:_name(name), _sGrade(sgrade), _exGrade(exgrade), _signed(false)
 {
 	if (_sGrade <= 0 || _exGrade <= 0)
 		throw GradeTooHighException();
@@ -60,6 +60,8 @@ void		Form::beSigned(const Bureaucrat &b)
 		throw GradeTooHighException();
 	else if (b.getGrade() >= 151)
 		throw GradeTooLowException();
+	else if (_signed)
+		throw AlreadySigned();
 	else
 	{
 		std::cout << "<" << _name << "> signed by " << b.getName() << std::endl;

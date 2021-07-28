@@ -5,13 +5,15 @@
 #include <string>
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form
 {
 	private:
 		const std::string	_name;
 		const int			_sGrade;
 		const int			_exGrade;
-		bool				_signed = false;
+		bool				_signed;
 		Form();
 	public:
 		Form(const std::string name, const int sgrade, const int exgrade);
@@ -35,6 +37,13 @@ class Form
 			const char *what () const throw ()
 			{
 				return ("Grade too low");
+			}
+		};
+		class AlreadySigned : public std::exception
+		{
+			const char *what () const throw ()
+			{
+				return ("Form already signed");
 			}
 		};
 };

@@ -7,10 +7,12 @@ CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
 HEADERS = \
 		./Bureaucrat.hpp \
+		./Form.hpp \
 
 SRCS = \
 		./main.cpp \
 		./Bureaucrat.cpp \
+		./Form.cpp \
 
 OBJS = $(SRCS:%.cpp=%.o)
 
