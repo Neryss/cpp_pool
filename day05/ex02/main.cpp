@@ -1,15 +1,20 @@
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int	main()
 {
 	try
 	{
 		ShrubberyCreationForm	s1("home");
-		ShrubberyCreationForm	s2("aled");
+		// ShrubberyCreationForm	s2("aled");
+		RobotomyRequestForm		r1("yikes");
+
 		Bureaucrat	bob("bob", 1);
 		s1.beSigned(bob);
+		bob.signForm(r1);
 		s1.execute(bob);
+		r1.execute(bob);
 		// std::cout << s1 << s1.getTarget() << std::endl;
 		// std::cout << s2 << s2.getTarget() << std::endl;
 		// s2 = s1;
