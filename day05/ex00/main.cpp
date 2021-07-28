@@ -4,13 +4,16 @@ int	main()
 {
 	try
 	{
-		Bureaucrat	bob("bob", 3);
-		for (int i = 0; i < 3; i++)
-		{
-			std::cout << bob;
-			bob.incrementGrade();
-		}
+		Bureaucrat	bob("bob", 150);
+		Bureaucrat	test(bob);
+		bob.incrementGrade();
+		// for (int i = 0; i < 3; i++)
+		// {
+		// 	std::cout << bob;
+		// 	bob.incrementGrade();
+		// }
 		std::cout << bob;
+		std::cout << test;
 	}
 	catch (std::exception &e)
 	{
