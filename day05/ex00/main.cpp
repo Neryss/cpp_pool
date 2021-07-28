@@ -6,7 +6,7 @@ int	main()
 	{
 		Bureaucrat	bob("bob", 0);
 	}
-	catch (Bureaucrat::GradeTooHighException &e)
+	catch (std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
