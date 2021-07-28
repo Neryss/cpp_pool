@@ -17,13 +17,20 @@ class Bureaucrat
 		std::string	getName() const;
 		int			getGrade() const;
 		void		incrementGrade();
-		void		decrenebtGrade();
+		void		decrementGrade();
 		Bureaucrat	&operator=(const Bureaucrat &other);
 		class GradeTooHighException : std::exception
 		{
 			const char	*what () const throw ()
 			{
 				return ("Grade too high exception!\n");
+			}
+		};
+		class GradeTooLowException : std::exception
+		{
+			const char	*what () const throw ()
+			{
+				return ("Grade too low exception!\n");
 			}
 		};
 };

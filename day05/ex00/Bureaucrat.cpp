@@ -3,11 +3,19 @@
 Bureaucrat::Bureaucrat(std::string name, int grade)
 :_name(name), _grade(grade)
 {
+	if (_grade <= 0)
+		throw GradeTooHighException();
+	else if (_grade >= 151)
+		throw GradeTooLowException();
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other)
 :_name(other._name), _grade(other._grade)
 {
+	if (_grade <= 0)
+		throw GradeTooHighException();
+	else if (_grade >= 151)
+		throw GradeTooLowException();
 }
 
 Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &other)
@@ -21,3 +29,18 @@ Bureaucrat::~Bureaucrat()
 {
 }
 
+std::string	Bureaucrat::getName() const
+{
+	return (_name);
+}
+
+int	Bureaucrat::getGrade() const
+{
+	return (_grade);
+}
+
+// void	Bureaucrat::incrementGrade()
+// {
+// 	if (_grade <=)
+// 	_grade--;
+// }
