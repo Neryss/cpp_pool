@@ -9,7 +9,8 @@ int	main()
 		std::cout << f1;
 		bob.signForm(f1);
 		bob.signForm(f1);
-		// f1.beSigned(bob);
+		f1.beSigned(bob);
+		f1.beSigned(bob);
 		std::cout << f1;
 		return (0);
 	}
