@@ -56,12 +56,10 @@ std::ostream	&operator<<(std::ostream &os, const Form &f)
 
 void		Form::beSigned(const Bureaucrat &b)
 {
-	if (b.getGrade() <= 0)
-		throw GradeTooHighException();
-	else if (b.getGrade() >= 151)
+	if (b.getGrade() > _sGrade)
 		throw GradeTooLowException();
 	else if (_signed)
-		throw AlreadySigned();
+		std::cout << "<" << _name << "> already signed" << std::endl;
 	else
 	{
 		std::cout << "<" << _name << "> signed by " << b.getName() << std::endl;

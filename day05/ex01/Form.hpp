@@ -39,13 +39,6 @@ class Form
 				return ("Grade too low");
 			}
 		};
-		class AlreadySigned : public std::exception
-		{
-			const char *what () const throw ()
-			{
-				return ("Form already signed");
-			}
-		};
 };
 
 std::ostream	&operator<<(std::ostream &os, const Form &f);
