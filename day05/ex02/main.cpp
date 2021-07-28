@@ -12,8 +12,10 @@ int	main()
 		PresidentialPardonForm	p1("hello");
 
 		Bureaucrat	bob("bob", 1);
+		Bureaucrat	noob("noob", 80);
 		s1.beSigned(bob);
-		bob.signForm(r1);
+		s1.beSigned(noob);
+		noob.signForm(r1);
 		s1.execute(bob);
 		r1.execute(bob);
 		bob.signForm(p1);
