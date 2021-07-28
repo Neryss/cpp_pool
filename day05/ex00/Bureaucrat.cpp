@@ -20,7 +20,8 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other)
 
 Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &other)
 {
-	_name = other._name;
+	// _name = other._name;
+	std::cout << _name << std::endl;
 	_grade = other._grade;
 	return (*this);
 }
