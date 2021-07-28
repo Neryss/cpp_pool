@@ -1,4 +1,4 @@
-NAME = brain
+NAME = Bureaucrat
 
 CC = clang++
 MAKE = make --no-print-directory

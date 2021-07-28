@@ -21,17 +21,19 @@ class Bureaucrat
 		Bureaucrat	&operator=(const Bureaucrat &other);
 		class GradeTooHighException : std::exception
 		{
-			const char	*what () const throw ()
-			{
-				return ("Grade too high exception!\n");
-			}
+			public:
+				const char	*what () const throw ()
+				{
+					return ("Grade too high exception!\n");
+				}
 		};
 		class GradeTooLowException : std::exception
 		{
-			const char	*what () const throw ()
-			{
-				return ("Grade too low exception!\n");
-			}
+			public:
+				const char	*what () const throw ()
+				{
+					return ("Grade too low exception!\n");
+				}
 		};
 };
 
