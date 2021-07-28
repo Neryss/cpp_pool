@@ -1,0 +1,20 @@
+#include "Form.hpp"
+
+Form::Form(const std::string name, const int sgrade, const int exgrade)
+:_name(name), _sGrade(sgrade), _exGrade(exgrade)
+{
+	if (_sGrade <= 0 || _exGrade <= 0)
+		throw GradeTooHighException();
+	else if (_sGrade >= 151 || _exGrade >= 151)
+		throw GradeTooLowException();
+}
+
+Form::Form(const Form &other)
+:_name(other._name), _sGrade(other._sGrade), _exGrade(other._exGrade), _signed(other._signed)
+{
+	if (_sGrade <= 0 || _exGrade <= 0)
+		throw GradeTooHighException();
+	else if (_sGrade >= 151 || _exGrade >= 151)
+		throw GradeTooLowException();
+}
+
