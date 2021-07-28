@@ -1,4 +1,5 @@
 #include "ShrubberyCreationForm.hpp"
+#include <fstream>
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("ShrubberyCreationForm", 145, 137), _target(target)
 {}
@@ -22,11 +23,17 @@ std::string	ShrubberyCreationForm::getTarget()
 
 void		ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 {
+	std::ofstream	file; 
 	if (!getSigned())
 		throw NotSigned();
 	else if (executor.getGrade() > getExGrade())
 		throw GradeTooLowException();
 	else
-		std::cout << TREE;
+	{
+		std::cout << "Tree created!" << std::endl;
+		file.open(_target + "_shrubbery");
+		file << TREE;
+		file.close();
+	}
 }
 
