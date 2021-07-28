@@ -19,3 +19,14 @@ std::string	ShrubberyCreationForm::getTarget()
 {
 	return (_target);
 }
+
+void		ShrubberyCreationForm::execute(const Bureaucrat &executor) const
+{
+	if (!getSigned())
+		throw NotSigned();
+	else if (executor.getGrade() > getExGrade())
+		throw GradeTooLowException();
+	else
+		std::cout << TREE;
+}
+

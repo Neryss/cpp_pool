@@ -2,6 +2,34 @@
 #define	SHRUBBERY_HPP
 
 #include "Form.hpp"
+#define TREE "                                                         .\n\
+                                              .         ;  \n\
+                 .              .              ;%     ;;   \n\
+                   ,           ,                :;%  %;   \n\
+                    :         ;                   :;%;'     .,   \n\
+           ,.        %;     %;            ;        %;'    ,;\n\
+             ;       ;%;  %%;        ,     %;    ;%;    ,%'\n\
+              %;       %;%;      ,  ;       %;  ;%;   ,%;' \n\
+               ;%;      %;        ;%;        % ;%;  ,%;'\n\
+                `%;.     ;%;     %;'         `;%%;.%;'\n\
+                 `:;%.    ;%%. %@;        %; ;@%;%'\n\
+                    `:%;.  :;bd%;          %;@%;'\n\
+                      `@%:.  :;%.         ;@@%;'   \n\
+                        `@%.  `;@%.      ;@@%;         \n\
+                          `@%%. `@%%    ;@@%;        \n\
+                            ;@%. :@%%  %@@%;       \n\
+                              %@bd%%%bd%%:;     \n\
+                                #@%%%%%:;;\n\
+                                %@@%%%::;\n\
+                                %@@@%(o);  . '         \n\
+                                %@@@o%;:(.,'         \n\
+                            `.. %@@@o%::;         \n\
+                               `)@@@o%::;         \n\
+                                %@@(o)::;        \n\
+                               .%@@@@%::;         \n\
+                               ;%@@@@%::;.          \n\
+                              ;%@@@@%%:;;;. \n\
+                          ...;%@@@@@%%:;;;;,..  \n"
 
 class	ShrubberyCreationForm : public Form
 {
@@ -14,6 +42,7 @@ class	ShrubberyCreationForm : public Form
 		~ShrubberyCreationForm();
 		std::string	getTarget();
 		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &other);
+		void		execute(const Bureaucrat &executor) const;
 };
 
 #endif

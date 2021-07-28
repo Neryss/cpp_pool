@@ -7,6 +7,9 @@ int	main()
 	{
 		ShrubberyCreationForm	s1("home");
 		ShrubberyCreationForm	s2("aled");
+		Bureaucrat	bob("bob", 1);
+		s1.beSigned(bob);
+		s1.execute(bob);
 		// std::cout << s1 << s1.getTarget() << std::endl;
 		// std::cout << s2 << s2.getTarget() << std::endl;
 		// s2 = s1;
