@@ -53,3 +53,16 @@ std::ostream	&operator<<(std::ostream &os, const Form &f)
 	os << "<" << f.getName() << ">, sgrade : " << f.getSGrade() << " exGrade : " << f.getExGrade() << " signed : " << f.getSigned() << std::endl;
 	return (os);
 }
+
+void		Form::beSigned(const Bureaucrat &b)
+{
+	if (b.getGrade() <= 0)
+		throw GradeTooHighException();
+	else if (b.getGrade() >= 151)
+		throw GradeTooLowException();
+	else
+	{
+		std::cout << "<" << _name << "> signed by " << b.getName() << std::endl;
+		_signed = true;
+	}
+}
