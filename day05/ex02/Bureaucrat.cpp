@@ -65,6 +65,16 @@ void	Bureaucrat::signForm(Form &f)
 	}
 }
 
+void	Bureaucrat::executeForm(const Form &form)
+{
+	if (form.getExGrade() < _grade)
+		std::cout << _name << " couldn't execute " << form.getName() << ", too low level" << std::endl;
+	else if (!form.getSigned())
+		std::cout << form.getName() << " was not signed " << std::endl;
+	else
+		form.execute(*this);
+}
+
 std::ostream	&operator<<(std::ostream &os, const Bureaucrat &b)
 {
 	os << "<" << b.getName() << ">, bureaucrat grade <" << b.getGrade() << ">" << std::endl;
