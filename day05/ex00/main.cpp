@@ -15,12 +15,13 @@ int	main()
 		// 	std::cout << bob;
 		// 	bob.decrementGrade();
 		// }
-		for (int i = 0; i < 10; i++)
-		{
-				std::cout << salut;
-				salut.incrementGrade();
-		}
+		// for (int i = 0; i < 10; i++)
+		// {
+		// 		std::cout << salut;
+		// 		salut.incrementGrade();
+		// }
 		std::cout << bob;
+		std::cout << salut;
 		std::cout << test;
 		return (0);
 	}
