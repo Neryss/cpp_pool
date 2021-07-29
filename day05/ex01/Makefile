@@ -1,4 +1,4 @@
-NAME = Bureaucrat
+NAME = Form
 
 CC = clang++
 MAKE = make --no-print-directory
