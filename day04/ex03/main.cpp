@@ -29,6 +29,8 @@ int	main()
 	Character	*boby = new Character(*bob);
 	bob->equip(tmp);
 	bob->unequip(0);
+	// boby->equip(tmp);
+	// boby->unequip(0);
 
 	me->use(0, *bob);
 	me->use(1, *boby);
