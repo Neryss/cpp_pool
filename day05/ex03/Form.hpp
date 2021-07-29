@@ -18,7 +18,7 @@ class Form
 	public:
 		Form(const std::string name, const int sgrade, const int exgrade);
 		Form(const Form &other);
-		~Form();
+		virtual ~Form();
 		Form	&operator=(const Form &other);
 		std::string	getName() const;
 		bool		getSigned() const;
