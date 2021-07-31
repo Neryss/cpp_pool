@@ -25,7 +25,6 @@ int	main()
 		bob.executeForm(*rrf);
 		tet.executeForm(*rrf);
 		rrf->execute(tet);
-		std::cout << "ALED" << std::endl;
 	}
 	catch (std::exception &e)
 	{
