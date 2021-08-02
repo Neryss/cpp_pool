@@ -9,11 +9,20 @@ void	checker(char *value)
 
 	cast = atof(value);
 	std::cout << "aled" << cast << std::endl;
+
 	// CHAR CAST
 	if (cast < -128 || cast > 127 || std::isnan(cast))
 		std::cout << "char: impossible" << std::endl;
 	else if (isprint(static_cast<int>(cast)))
 		std::cout << "char: \'" << static_cast<char>(cast) << "\'" << std::endl;
+	else
+		std::cout << "char: non displayable" << std::endl;
+
+	// INT CAST
+	if (cast < -2147483648 || cast > 2147483647 || std::isnan(cast))
+		std::cout << "int: impossible" << std::endl;
+	else
+		std::cout << "int: \'" << static_cast<int>(cast) << "\'" << std::endl;
 }
 
 int	main(int argc, char **argv)
