@@ -1,4 +1,4 @@
-NAME = scalar
+NAME = convert
 
 CC = clang++
 MAKE = make --no-print-directory
@@ -9,6 +9,7 @@ HEADERS = \
 
 
 SRCS = \
+	main.cpp \
 
 
 OBJS = $(SRCS:%.cpp=%.o)
