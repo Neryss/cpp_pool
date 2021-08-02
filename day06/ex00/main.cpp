@@ -8,9 +8,10 @@ void	checker(char *value)
 	double	cast;
 
 	cast = atof(value);
-	std::cout << "aled" << cast << std::endl;
+	// std::cout << "aled" << cast << std::endl;
 
 	// CHAR CAST
+	// Check isnan
 	if (cast < -128 || cast > 127 || std::isnan(cast))
 		std::cout << "char: impossible" << std::endl;
 	else if (isprint(static_cast<int>(cast)))
@@ -23,6 +24,12 @@ void	checker(char *value)
 		std::cout << "int: impossible" << std::endl;
 	else
 		std::cout << "int: \'" << static_cast<int>(cast) << "\'" << std::endl;
+
+	// DOUBLE CAST
+	std::cout << "double: \'" << std::setprecision(1) << std::fixed << cast << "\'" << std::endl;
+
+	// FLOAT CAST
+	std::cout << "float: \'" << std::setprecision(1) << std::fixed << static_cast<float>(cast) << "f\'" << std::endl;
 }
 
 int	main(int argc, char **argv)
