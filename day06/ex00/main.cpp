@@ -12,6 +12,7 @@ void	checker(char *value)
 
 	// CHAR CAST
 	// Check isnan
+	// need to check overflows
 	if (cast < -128 || cast > 127 || std::isnan(cast))
 		std::cout << "char: impossible" << std::endl;
 	else if (isprint(static_cast<int>(cast)))
