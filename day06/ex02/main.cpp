@@ -22,17 +22,19 @@ Base	*generate(void)
 
 void	identify(Base *p)
 {
-	// dynamic_cast<A&>(*p);
+	if (dynamic_cast<A*>(p))
+		std::cout << "A" << std::endl;
 }
 
-void	identify(Base &p)
-{
+// void	identify(Base &p)
+// {
 
-}
+// }
 
 int main(void)
 {
 	Base	*rb = generate();
+	identify(rb);
 	delete rb;
 	return (0);
 }
