@@ -2,12 +2,15 @@
 #include <string>
 #include <cmath>
 #include <iomanip>
+#include <limits>
 
 void	checker(char *value)
 {
 	double	cast;
+	(void)value;
 
 	cast = atof(value);
+	// cast = __DBL_MAX__;
 	// std::cout << "aled" << cast << std::endl;
 
 	// CHAR CAST
@@ -27,10 +30,17 @@ void	checker(char *value)
 		std::cout << "int: \'" << static_cast<int>(cast) << "\'" << std::endl;
 
 	// DOUBLE CAST
-	std::cout << "double: \'" << std::setprecision(1) << std::fixed << cast << "\'" << std::endl;
+	if (cast >= __DBL_MAX__)
+		std::cout << "double: " << "impossible\'" << std::endl;
+	else
+		std::cout << "double: " << std::setprecision(1) << std::fixed << cast + 100 << std::endl;
 
 	// FLOAT CAST
-	std::cout << "float: \'" << std::setprecision(1) << std::fixed << static_cast<float>(cast) << "f\'" << std::endl;
+	if (cast >= std::numeric_limits<float>::max())
+		std::cout << "float: impossible" << std::endl;
+	else
+		std::cout << "float: " << static_cast<float>(cast) << "f" << std::endl;
+	//  << std::setprecision(1) << std::fixed
 }
 
 int	main(int argc, char **argv)
