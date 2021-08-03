@@ -33,14 +33,13 @@ void	checker(char *value)
 	if (cast >= __DBL_MAX__)
 		std::cout << "double: " << "impossible\'" << std::endl;
 	else
-		std::cout << "double: " << std::setprecision(1) << std::fixed << cast + 100 << std::endl;
+		std::cout << "double: " << std::setprecision(1) << std::fixed << cast << std::endl;
 
 	// FLOAT CAST
 	if (cast >= std::numeric_limits<float>::max())
 		std::cout << "float: impossible" << std::endl;
 	else
-		std::cout << "float: " << static_cast<float>(cast) << "f" << std::endl;
-	//  << std::setprecision(1) << std::fixed
+		std::cout << "float: " << std::setprecision(1) << std::fixed << static_cast<float>(cast) << "f" << std::endl;
 }
 
 int	main(int argc, char **argv)
