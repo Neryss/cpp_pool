@@ -22,7 +22,7 @@ Base	*generate(void)
 
 void	identify(Base *p)
 {
-	
+	// dynamic_cast<A&>(*p);
 }
 
 void	identify(Base &p)
