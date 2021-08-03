@@ -10,8 +10,6 @@ void	checker(char *value)
 	(void)value;
 
 	cast = atof(value);
-	// cast = __DBL_MAX__;
-	// std::cout << "aled" << cast << std::endl;
 
 	// CHAR CAST
 	// Check isnan
@@ -22,24 +20,21 @@ void	checker(char *value)
 		std::cout << "char: \'" << static_cast<char>(cast) << "\'" << std::endl;
 	else
 		std::cout << "char: non displayable" << std::endl;
-
 	// INT CAST
 	if (cast < -2147483648 || cast > 2147483647 || std::isnan(cast))
 		std::cout << "int: impossible" << std::endl;
 	else
-		std::cout << "int: \'" << static_cast<int>(cast) << "\'" << std::endl;
-
-	// DOUBLE CAST
-	if (cast >= __DBL_MAX__ || cast <= __DBL_MIN__)
-		std::cout << "double: " << "impossible\'" << std::endl;
-	else
-		std::cout << "double: " << std::setprecision(1) << std::fixed << cast << std::endl;
-
+		std::cout << "int: " << static_cast<int>(cast) << std::endl;
 	// FLOAT CAST
 	if (cast >= std::numeric_limits<float>::max() || cast <= std::numeric_limits<float>::min())
 		std::cout << "float: impossible" << std::endl;
 	else
 		std::cout << "float: " << std::setprecision(1) << std::fixed << static_cast<float>(cast) << "f" << std::endl;
+	// DOUBLE CAST
+	if (cast >= __DBL_MAX__ || cast <= __DBL_MIN__)
+		std::cout << "double: " << "impossible\'" << std::endl;
+	else
+		std::cout << "double: " << std::setprecision(1) << std::fixed << cast << std::endl;
 }
 
 int	main(int argc, char **argv)
