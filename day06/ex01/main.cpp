@@ -19,9 +19,16 @@ Data	*deserialize(uintptr_t raw)
 
 int main(void)
 {
-	Data	bob;
+	Data		bob;
+	uintptr_t	addr;
 	bob._name = "Bob";
 	bob._level = 10;
 	std::cout << bob._name << " lvl " << bob._level << std::endl;
+	std::cout << "Serialize" << std::endl;
+	addr = serialize(&bob);
+	std::cout << addr << std::endl;
+	std::cout << "Deserialize" << std::endl;
+	Data	*ptr = deserialize(addr);
+	std::cout << ptr->_name << " lvl " << ptr->_level << std::endl;
 	return (0);
 }
