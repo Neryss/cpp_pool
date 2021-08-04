@@ -16,7 +16,6 @@ int main(void)
 	for (int i = 0; i < 5; i++)
 		std::cout << iclone[i] << std::endl;
 
-
 	std::cout << "------ STRINGS ------" << std::endl;
 	s_array[0] = "yo";
 	s_array[1] = "les";
