@@ -11,7 +11,7 @@ class Array
 		T	*_array;
 		unsigned int	_n;
 	public:
-		Array() {_array = NULL, _n = 0};
+		Array():_array(NULL), _n(0) {};
 		Array(unsigned int n)
 		{
 			_array = new T[n];
@@ -20,7 +20,7 @@ class Array
 		Array(const Array &other)
 		{
 			_array = new T[other.size()];
-			_n = n;
+			_n = other._n;
 			for (int i = 0; i < _n; i++)
 				other._array[i] = _array[i];
 		}
@@ -35,14 +35,29 @@ class Array
 			{
 				if (_array)
 					delete [] _array;
-				_n = other._n
+				_n = other._n;
 				_array = new T[_n];
 				for (int i = 0; i < _n; i++)
 					_array[i] = other._array[i];
 			}
 			return (*this);
 		}
-		unsigned int	size() {return (_n)}
-}
+		class OutOfRangeException : public std::exception
+		{
+			const char *what () const throw()
+			{
+				return ("Error: Out of bounds");
+			}
+		};
+		T	&operator[](int i) const
+		{
+			if (i < 0 || !_array || i >= _n)
+				throw OutOfRangeException();
+			return (_array[i]);
+		}
+		unsigned int	size() {
+			return (_n);
+		}
+};
 
 #endif
