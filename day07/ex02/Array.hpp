@@ -55,7 +55,7 @@ class Array
 				throw OutOfRangeException();
 			return (_array[i]);
 		}
-		unsigned int	size() {
+		unsigned int	size() const {
 			return (_n);
 		}
 };
