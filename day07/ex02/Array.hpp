@@ -11,10 +11,38 @@ class Array
 		T	*_array;
 		unsigned int	_n;
 	public:
-		Array();
-		Array(unsigned int n);
-		Array(const Array &other);
-		Array	&operator=(const Array &other);
+		Array() {_array = NULL, _n = 0};
+		Array(unsigned int n)
+		{
+			_array = new T[n];
+			_n = n;
+		}
+		Array(const Array &other)
+		{
+			_array = new T[other.size()];
+			_n = n;
+			for (int i = 0; i < _n; i++)
+				other._array[i] = _array[i];
+		}
+		~Array()
+		{
+			if (_array)
+				delete [] _array;
+		}
+		Array	&operator=(const Array &other)
+		{
+			if (this != &other)
+			{
+				if (_array)
+					delete [] _array;
+				_n = other._n
+				_array = new T[_n];
+				for (int i = 0; i < _n; i++)
+					_array[i] = other._array[i];
+			}
+			return (*this);
+		}
+		unsigned int	size() {return (_n)}
 }
 
 #endif
