@@ -23,7 +23,7 @@ int	main()
 		// 	bob.decrementGrade();
 		// }
 		// Will throw exception because grade will be too high
-		// for (int i = 0; i < 10; i++)
+		// for (int i = 0; i < 11; i++)
 		// {
 		// 		salut.incrementGrade();
 		// 		std::cout << salut;
