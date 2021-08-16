@@ -7,7 +7,7 @@
 class Span
 {
 	private:
-		std::vector<int> v;
+		std::vector<int> _v;
 		unsigned int _size;
 		unsigned int _filled;
 		Span();
@@ -16,6 +16,8 @@ class Span
 		Span(const Span &other);
 		~Span();
 		Span	&operator=(const Span &other);
-}
+
+		void	addNumber(int nb);
+};
 
 #endif
