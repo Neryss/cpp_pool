@@ -27,6 +27,7 @@ int main(void)
 	try
 	{
 		std::cout << i1[10] << std::endl;
+		// std::cout << i1[-1] << std::endl;
 	}
 	catch (const std::exception &e)
 	{
