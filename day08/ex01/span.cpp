@@ -7,7 +7,7 @@ Span::Span(unsigned int N)
 }
 
 Span::Span(const Span &other)
-:_size(other._size), _filled(other._filled), _v(other._v)
+:_v(other._v), _size(other._size), _filled(other._filled)
 {
 }
 
@@ -43,6 +43,19 @@ int	Span::shortestSpan(void)
 		while (++it + 1 != _v.begin() + _filled && i++ < _filled)
 			res = std::min(res, *it - *(it - 1));
 		return (res);
+	}
+}
+
+int Span::longestSpan(void)
+{
+	if (!_filled)
+		throw VectorNoSpanException();
+	else
+	{
+		std::sort(_v.begin(), _v.begin() + _filled);
+		int max = *(std::max_element(_v.begin(), _v.begin() + _filled));
+		int min = *(std::min_element(_v.begin(), _v.begin() + _filled));
+		return (max - min);
 	}
 }
 
