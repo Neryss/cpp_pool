@@ -20,14 +20,14 @@ class Span
 		void	addNumber(int nb);
 		int	shortestSpan(void);
 		int	longestSpan(void);
-		class	VectorFilledException : std::exception
+		class	VectorFilledException : public std::exception
 		{
 			const char *what() const throw()
 			{
 				return ("Vector already filled!");
 			}
 		};
-		class	VectorNoSpanException : std::exception
+		class	VectorNoSpanException : public std::exception
 		{
 			const char *what() const throw()
 			{
