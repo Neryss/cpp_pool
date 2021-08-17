@@ -34,7 +34,13 @@ class Span
 				return ("No span found!");
 			}
 		};
-		std::vector<int>	&operator[](int i) const;
+		class	VectorOOB : public std::exception
+		{
+			const char *what() const throw()
+			{
+				return ("Error: Out of bounds!");
+			}
+		};
 		void	display();
 };
 

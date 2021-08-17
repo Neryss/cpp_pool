@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	Span test(5);
+	Span test(6);
 	Span error(1);
 	try
 	{
@@ -18,10 +18,11 @@ int main(void)
 		// error.addNumber(79);
 		std::cout << test.shortestSpan() << std::endl;
 		std::cout << copy.shortestSpan() << std::endl;
-		// std::cout << test.longestSpan() << std::endl;
 		std::cout << copy.longestSpan() << std::endl;
 		std::cout << test.longestSpan() << std::endl;
-		// std::cout << error.longestSpan() << std::endl;
+		copy.addNumber(68);
+		std::cout << copy.longestSpan() << std::endl;
+		std::cout << test.longestSpan() << std::endl;
 	}
 	catch (const std::exception &e)
 	{

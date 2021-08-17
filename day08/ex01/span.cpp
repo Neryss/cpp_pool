@@ -67,11 +67,6 @@ void	Span::display()
 		std::cout << _v[i] << std::endl;
 }
 
-std::vector<int>	&operator[](int i) const
-{
-	
-}
-
 Span::~Span()
 {
 }
