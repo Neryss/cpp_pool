@@ -1,4 +1,5 @@
 #include "span.hpp"
+#include <iostream>
 
 Span::Span(unsigned int N)
 :_size(N), _filled(0)
@@ -7,8 +8,9 @@ Span::Span(unsigned int N)
 }
 
 Span::Span(const Span &other)
-:_v(other._v), _size(other._size), _filled(other._filled)
+:_size(other._size), _filled(other._filled)
 {
+	_v = std::vector<int>(other._v);
 }
 
 Span	&Span::operator=(const Span &other)
@@ -17,7 +19,7 @@ Span	&Span::operator=(const Span &other)
 	{
 		_size = other._size;
 		_filled = other._filled;
-		_v = other._v;
+		_v = std::vector<int>(other._v);
 	}
 	return (*this);
 }
@@ -57,6 +59,17 @@ int Span::longestSpan(void)
 		int min = *(std::min_element(_v.begin(), _v.begin() + _filled));
 		return (max - min);
 	}
+}
+
+void	Span::display()
+{
+	for (int i = 0; i < (int)_v.size(); i++)
+		std::cout << _v[i] << std::endl;
+}
+
+std::vector<int>	&operator[](int i) const
+{
+	
 }
 
 Span::~Span()

@@ -34,6 +34,8 @@ class Span
 				return ("No span found!");
 			}
 		};
+		std::vector<int>	&operator[](int i) const;
+		void	display();
 };
 
 #endif

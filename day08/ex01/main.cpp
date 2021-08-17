@@ -5,9 +5,6 @@ int main(void)
 {
 	Span test(5);
 	Span error(1);
-	Span copy(4);
-	copy = test;
-
 	try
 	{
 		test.addNumber(5);
@@ -15,12 +12,15 @@ int main(void)
 		test.addNumber(17);
 		test.addNumber(9);
 		test.addNumber(11);
+		Span copy(test);
 
 		error.addNumber(69);
 		// error.addNumber(79);
 		std::cout << test.shortestSpan() << std::endl;
-		std::cout << test.longestSpan() << std::endl;
+		std::cout << copy.shortestSpan() << std::endl;
+		// std::cout << test.longestSpan() << std::endl;
 		std::cout << copy.longestSpan() << std::endl;
+		std::cout << test.longestSpan() << std::endl;
 		// std::cout << error.longestSpan() << std::endl;
 	}
 	catch (const std::exception &e)
