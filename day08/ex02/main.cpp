@@ -29,5 +29,6 @@ int main(void)
 		++it;
 	}
 	std::stack<int> s(mstack);
+	std::cout << s.top() << " and " << mstack.top() << std::endl;
 	return (0);
 }
