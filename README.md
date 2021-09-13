@@ -12,5 +12,5 @@
 - Day04 : 100
 - Day05 : 100
 - Day06 : 100
-- Day07 : waiting
+- Day07 : 100
 - Day08 : waiting
